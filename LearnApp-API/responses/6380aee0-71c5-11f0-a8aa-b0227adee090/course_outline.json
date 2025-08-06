@@ -1,0 +1,36 @@
+{
+    "Title": "Mastering Python Programming: Data Analysis & Automation",
+    "Overview": "This course provides a practical pathway to enhance your data analysis and automation skills with Python. You'll gain hands-on experience with essential libraries, building a portfolio of projects to boost your career prospects in today's data-driven job market.",
+    "Prerequisites": [
+        "Basic computer literacy and familiarity with command-line interfaces.",
+        "Introductory understanding of programming concepts like variables and conditional statements (e.g., Codecademy's introductory Python course)."
+    ],
+    "LearningOutcomes": [
+        "**Week 1:** Understand fundamental Python data structures and control flow.",
+        "**Week 1:** Remember key Python syntax and data types.",
+        "**Week 2:** Apply Python libraries for data manipulation and cleaning.",
+        "**Week 2:** Understand common data analysis techniques using Python.",
+        "**Week 3:** Develop automation scripts for repetitive tasks.",
+        "**Week 3:** Apply conditional logic and loops in automation scripts.",
+        "**Week 4:** Analyze real-world datasets using Python and visualize insights.",
+        "**Week 4:** Create automated workflows for data processing and reporting.",
+        "**Week 4:** Understand best practices for writing clean and maintainable Python code.",
+        "**Week 4:** Apply data analysis and automation techniques to solve practical problems."
+    ],
+    "Skills": [
+        "Python",
+        "Data Manipulation (Pandas)",
+        "Data Analysis",
+        "Automation",
+        "Scripting",
+        "Data Visualization (Matplotlib/Seaborn)",
+        "Object-Oriented Programming (OOP) Fundamentals",
+        "Version Control (Git)",
+        "Problem-Solving",
+        "Statistical Analysis"
+    ],
+    "Duration": {
+        "totalWeeks": "4 weeks",
+        "hoursPerWeek": 4
+    }
+}

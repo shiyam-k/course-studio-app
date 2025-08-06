@@ -1,0 +1,54 @@
+{
+  "milestone_title": "Deploy a Diagnostic AI System for Medical Imaging",
+  "length": "10 hours",
+  "type": "exploration",
+  "description": "This culminating milestone challenges you to build and prepare for deployment a deep learning system designed to classify medical images, simulating a real-world application in healthcare diagnostics. You will apply foundational neural network concepts (Week 1), leverage *TensorFlow* and *Keras* for model construction and training (Week 2), implement and fine-tune advanced Convolutional Neural Network (*CNN*) architectures with *transfer learning* (Week 3), and outline a deployment strategy for your intelligent system (Week 4), consolidating your skills for a career in AI.",
+  "objectives": [
+    "Design and implement a robust Convolutional Neural Network (*CNN*) using *TensorFlow*/*Keras* for a medical image classification task, demonstrating proficiency in model architecture and training.",
+    "Apply advanced techniques like *transfer learning*, *data augmentation*, and *hyperparameter tuning* to optimize model performance and generalization on a novel, real-world dataset.",
+    "Evaluate the trained model's performance using appropriate metrics (e.g., precision, recall, F1-score) and systematically debug common issues encountered during complex deep learning projects.",
+    "Develop a deployment readiness plan, including *containerization* concepts (*Docker*) and cloud considerations, demonstrating an end-to-end understanding of the AI model lifecycle for production."
+  ],
+  "prerequisites": [
+    "Module:1.2",
+    "Module:1.3",
+    "Module:2.2",
+    "Module:3.1",
+    "Module:3.2",
+    "Module:4.2",
+    "Module:4.3"
+  ],
+  "deliverables": [
+    "A well-commented *Python* codebase (Jupyter Notebook or scripts) for data loading, model training, evaluation, and inference.",
+    "A trained deep learning model file (e.g., *.h5* or *SavedModel* format) for the medical image classification task.",
+    "A concise project report (PDF or Markdown) detailing the methodology, model architecture, training process, evaluation results, and key insights.",
+    "A conceptual deployment strategy document outlining the steps for containerization (*Docker*) and potential cloud platform deployment for the trained model."
+  ],
+  "upload_required": true,
+  "supported_filetypes": [
+    ".py",
+    ".ipynb",
+    ".h5",
+    ".pb",
+    ".pdf",
+    ".md"
+  ],
+  "references": [
+    {
+      "title": "Deep Learning for Medical Image Analysis: Challenges and Future Directions",
+      "source": "Journal of Medical Imaging"
+    },
+    {
+      "title": "Practical Transfer Learning in *TensorFlow* and *Keras*",
+      "source": "O'Reilly Media"
+    },
+    {
+      "title": "Effective Strategies for Hyperparameter Tuning in Deep Learning",
+      "source": "AI Magazine"
+    },
+    {
+      "title": "MLOps Principles: Building a Production Machine Learning System",
+      "source": "Google Cloud Blog"
+    }
+  ]
+}

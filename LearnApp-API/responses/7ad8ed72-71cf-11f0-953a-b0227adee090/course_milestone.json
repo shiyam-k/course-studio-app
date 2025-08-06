@@ -1,0 +1,46 @@
+{
+  "milestone_title": "Build a Personal Expense Tracker with Python",
+  "length": "Approximately 6-8 hours",
+  "type": "exploration",
+  "description": "This capstone project challenges you to apply all fundamental Python concepts learned throughout the course to develop a practical, console-based Personal Expense Tracker. You'll integrate knowledge of data types, control flow, functions, data structures like lists and dictionaries, file handling, and error management to create a functional application. This project is designed to be a significant portfolio piece, demonstrating your ability to solve real-world problems with Python and enhancing your readiness for entry-level programming roles.",
+  "objectives": [
+    "Design and implement a console-based Personal Expense Tracker application using core Python functionalities.",
+    "Utilize **Python** data structures (e.g., lists, dictionaries) and control flow (conditionals, loops) to manage expense records effectively.",
+    "Implement file input/output operations to persist expense data, ensuring data is saved and loaded across sessions.",
+    "Apply error handling techniques to create a robust application that gracefully manages user input issues and file operations.",
+    "Structure code using functions for modularity and maintainability, adhering to **Python** best practices for a portfolio-ready project."
+  ],
+  "prerequisites": [
+    "Module:1.2",
+    "Module:2.1",
+    "Module:2.2",
+    "Module:3.1",
+    "Module:3.2",
+    "Module:3.3",
+    "Module:4.1",
+    "Module:4.2"
+  ],
+  "deliverables": [
+    "A functional `expense_tracker.py` **Python** script.",
+    "A `README.md` file explaining the application's features, how to run it, and demonstrating the code structure."
+  ],
+  "upload_required": true,
+  "supported_filetypes": [
+    ".py",
+    ".md"
+  ],
+  "references": [
+    {
+      "title": "The Python Standard Library Documentation",
+      "source": "docs.python.org"
+    },
+    {
+      "title": "PEP 8 -- Style Guide for Python Code",
+      "source": "python.org"
+    },
+    {
+      "title": "Automate the Boring Stuff with Python: Practical Programming for Total Beginners",
+      "source": "No Starch Press"
+    }
+  ]
+}

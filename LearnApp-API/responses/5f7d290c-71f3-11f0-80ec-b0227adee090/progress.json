@@ -1,0 +1,26 @@
+{
+  "course_outline": {
+    "status": 2,
+    "timestamp": "2025-08-05T11:57:52.782631Z",
+    "path": "responses/5f7d290c-71f3-11f0-80ec-b0227adee090/course_outline.json",
+    "error": null
+  },
+  "course_weeks": {
+    "status": 2,
+    "timestamp": "2025-08-05T11:58:38.524320Z",
+    "path": "responses/5f7d290c-71f3-11f0-80ec-b0227adee090/course_weeks.json",
+    "error": null
+  },
+  "week_plans": {
+    "status": 2,
+    "timestamp": "2025-08-05T11:58:44.543945Z",
+    "path": "responses/5f7d290c-71f3-11f0-80ec-b0227adee090/week_plans.json",
+    "error": null
+  },
+  "course_milestone": {
+    "status": 2,
+    "timestamp": "2025-08-05T11:59:05.093523Z",
+    "path": "responses/5f7d290c-71f3-11f0-80ec-b0227adee090/course_milestone.json",
+    "error": null
+  }
+}

@@ -1,0 +1,1330 @@
+{
+    "course_outline": {
+        "title": "Mastering Python Programming: Data Analysis & Automation",
+        "overview": "This course provides a practical pathway to enhance your data analysis and automation skills with Python. You'll gain hands-on experience with essential libraries, building a portfolio of projects to boost your career prospects in today's data-driven job market.",
+        "prerequisites": [
+            {
+                "block_title": "Basic computer literacy and familiarity with command-line interfaces.",
+                "length": 0,
+                "type": "prerequisite",
+                "objectives": [],
+                "references": []
+            },
+            {
+                "block_title": "Introductory understanding of programming concepts like variables and conditional statements (e.g., Codecademy's introductory Python course).",
+                "length": 0,
+                "type": "prerequisite",
+                "objectives": [],
+                "references": []
+            }
+        ],
+        "total_weeks": 4,
+        "learning_outcomes": [
+            "**Week 1:** Understand fundamental Python data structures and control flow.",
+            "**Week 1:** Remember key Python syntax and data types.",
+            "**Week 2:** Apply Python libraries for data manipulation and cleaning.",
+            "**Week 2:** Understand common data analysis techniques using Python.",
+            "**Week 3:** Develop automation scripts for repetitive tasks.",
+            "**Week 3:** Apply conditional logic and loops in automation scripts.",
+            "**Week 4:** Analyze real-world datasets using Python and visualize insights.",
+            "**Week 4:** Create automated workflows for data processing and reporting.",
+            "**Week 4:** Understand best practices for writing clean and maintainable Python code.",
+            "**Week 4:** Apply data analysis and automation techniques to solve practical problems."
+        ],
+        "skills": [
+            "Python",
+            "Data Manipulation (Pandas)",
+            "Data Analysis",
+            "Automation",
+            "Scripting",
+            "Data Visualization (Matplotlib/Seaborn)",
+            "Object-Oriented Programming (OOP) Fundamentals",
+            "Version Control (Git)",
+            "Problem-Solving",
+            "Statistical Analysis"
+        ],
+        "weeks": [
+            {
+                "week_number": 1,
+                "week_topic": "Python Fundamentals",
+                "week_modules": [
+                    {
+                        "module_title": "Python Syntax and Data Types",
+                        "duration_hours": 1.3,
+                        "content_blocks": [
+                            {
+                                "block_title": "Build Python Code Structure",
+                                "length": 18,
+                                "type": "theory",
+                                "objectives": [
+                                    "**Define** fundamental Python code structure components, including indentation, comments, and basic syntax rules.",
+                                    "**Construct** simple Python programs demonstrating code structure, such as a program that prints a greeting message.",
+                                    "**Explain** the importance of code readability and maintainability in software development."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Python Documentation",
+                                        "source": "Getting Started : Python Software Foundation"
+                                    },
+                                    {
+                                        "title": "Real Python",
+                                        "source": "Understanding Code Structure : Real Python"
+                                    },
+                                    {
+                                        "title": "Codecademy",
+                                        "source": "Python Basics - Introduction to Code Structure : Codecademy"
+                                    }
+                                ]
+                            },
+                            {
+                                "block_title": "Explore Numeric Data Types",
+                                "length": 24,
+                                "type": "exploration",
+                                "objectives": [
+                                    "**Define** and **differentiate** between various numeric data types in **Python**, including integers, floating-point numbers, and complex numbers.",
+                                    "**Convert** between different numeric data types using built-in **Python** functions.",
+                                    "**Apply** numeric data types in basic mathematical operations and calculations."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Python Documentation",
+                                        "source": "Numeric Types : Python Software Foundation"
+                                    },
+                                    {
+                                        "title": "W3Schools",
+                                        "source": "Python Numbers : W3Schools"
+                                    },
+                                    {
+                                        "title": "GeeksforGeeks",
+                                        "source": "Data Types in Python : GeeksforGeeks"
+                                    }
+                                ]
+                            },
+                            {
+                                "block_title": "Build String Manipulation Techniques",
+                                "length": 18,
+                                "type": "theory",
+                                "objectives": [
+                                    "**Define** string manipulation techniques in **Python**, including concatenation, slicing, and formatting.",
+                                    "**Construct** **Python** programs that perform string operations, such as extracting substrings and replacing characters.",
+                                    "**Evaluate** the impact of string manipulation on data processing and user interface development."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Python Documentation",
+                                        "source": "String Formatting : Python Software Foundation"
+                                    },
+                                    {
+                                        "title": "Real Python",
+                                        "source": "String Manipulation in Python : Real Python"
+                                    },
+                                    {
+                                        "title": "TutorialsPoint",
+                                        "source": "String Methods in Python : TutorialsPoint"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "module_title": "Variables, Operators, and Control Flow",
+                        "duration_hours": 1.3,
+                        "content_blocks": [
+                            {
+                                "block_title": "Define and Assign Values to Variables",
+                                "length": 15,
+                                "type": "theory",
+                                "objectives": [
+                                    "Define the concept of variables and explain their importance in **Python** programming.",
+                                    "Assign values to variables using appropriate syntax and understand data types.",
+                                    "Differentiate between various data types in **Python** (e.g., integers, floats, strings, booleans)."
+                                ],
+                                "references": []
+                            },
+                            {
+                                "block_title": "Perform Arithmetic, Comparison, and Logical Operations",
+                                "length": 15,
+                                "type": "theory",
+                                "objectives": [
+                                    "Perform arithmetic, comparison, and logical operations using operators in **Python**.",
+                                    "Evaluate expressions involving different operator precedence rules.",
+                                    "Apply operators to solve basic mathematical and logical problems."
+                                ],
+                                "references": []
+                            },
+                            {
+                                "block_title": "Evaluate Conditional Expressions with Comparison Operators",
+                                "length": 15,
+                                "type": "exploration",
+                                "objectives": [
+                                    "Evaluate conditional expressions using comparison operators (e.g., ==, !=, >, <, >=, <=) in **Python**.",
+                                    "Understand the difference between equality and inequality comparisons.",
+                                    "Apply comparison operators to create logical conditions for decision-making."
+                                ],
+                                "references": []
+                            },
+                            {
+                                "block_title": "Implement Sequential Execution with Basic Control Flow",
+                                "length": 15,
+                                "type": "theory",
+                                "objectives": [
+                                    "Implement sequential execution of code using basic control flow structures in **Python**.",
+                                    "Understand the concept of order of operations in a program.",
+                                    "Write simple **Python** programs that execute statements in a defined sequence."
+                                ],
+                                "references": []
+                            },
+                            {
+                                "block_title": "Utilize Conditional Statements for Decision Making",
+                                "length": 10,
+                                "type": "exploration",
+                                "objectives": [
+                                    "Utilize conditional statements (if, elif, else) to control the flow of execution in **Python**.",
+                                    "Construct conditional logic based on different conditions.",
+                                    "Apply conditional statements to create programs that make decisions."
+                                ],
+                                "references": []
+                            },
+                            {
+                                "block_title": "Combine Conditional and Sequential Structures",
+                                "length": 10,
+                                "type": "theory",
+                                "objectives": [
+                                    "Combine conditional and sequential structures to create more complex **Python** programs.",
+                                    "Design programs that execute different blocks of code based on conditions.",
+                                    "Analyze and debug programs with nested conditional statements."
+                                ],
+                                "references": []
+                            }
+                        ]
+                    },
+                    {
+                        "module_title": "Data Structures: Lists, Tuples, and Dictionaries",
+                        "duration_hours": 1.4,
+                        "content_blocks": [
+                            {
+                                "block_title": "Build Ordered Collections with Lists",
+                                "length": 20,
+                                "type": "theory",
+                                "objectives": [
+                                    "**Define** the concept of ordered collections and explain the characteristics of **Lists** in **Python**.",
+                                    "**Construct** **Lists** to store and access multiple items, utilizing indexing and slicing techniques.",
+                                    "**Compare** and **contrast** **Lists** with other data structures, identifying their strengths and weaknesses for specific use cases."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Understanding Lists in Python",
+                                        "source": "Python Documentation"
+                                    },
+                                    {
+                                        "title": "Python List Tutorial",
+                                        "source": "W3Schools"
+                                    },
+                                    {
+                                        "title": "Introduction to Data Structures",
+                                        "source": "GeeksforGeeks"
+                                    }
+                                ]
+                            },
+                            {
+                                "block_title": "Explore Immutable Sequences: Tuples",
+                                "length": 15,
+                                "type": "theory",
+                                "objectives": [
+                                    "**Define** the concept of immutable sequences and explain the properties of **Tuples** in **Python**.",
+                                    "**Construct** **Tuples** to represent fixed collections of data, understanding their use in data integrity and function returns.",
+                                    "**Differentiate** between **Lists** and **Tuples**, **evaluating** when each data structure is most appropriate for a given task."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Tuples in Python",
+                                        "source": "Python Documentation"
+                                    },
+                                    {
+                                        "title": "Python Tuple Tutorial",
+                                        "source": "Tutorialspoint"
+                                    },
+                                    {
+                                        "title": "When to Use Tuples vs. Lists",
+                                        "source": "Real Python"
+                                    }
+                                ]
+                            },
+                            {
+                                "block_title": "Compare and Utilize Dictionaries for Key-Value Storage",
+                                "length": 25,
+                                "type": "theory",
+                                "objectives": [
+                                    "**Define** the concept of key-value storage and explain the structure of **Dictionaries** in **Python**.",
+                                    "**Construct** **Dictionaries** to store and retrieve data using keys, understanding the importance of key uniqueness.",
+                                    "**Compare** and **contrast** **Dictionaries** with **Lists** and **Tuples**, **evaluating** their suitability for data organization and retrieval."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Dictionaries in Python",
+                                        "source": "Python Documentation"
+                                    },
+                                    {
+                                        "title": "Python Dictionary Tutorial",
+                                        "source": "W3Schools"
+                                    },
+                                    {
+                                        "title": "Using Dictionaries for Data Storage",
+                                        "source": "Programiz"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "hours_per_week": 4,
+                "week_milestone": {
+                    "milestone_title": "Python Data Structures & Control Flow",
+                    "description": "This milestone focuses on applying Python fundamentals, including data structures (lists, tuples, dictionaries) and control flow (conditional and sequential execution). It culminates in building a simple program that utilizes these concepts to solve a practical problem, enhancing job readiness.",
+                    "objectives": [
+                        "Apply: Write Python code to manipulate lists, tuples, and dictionaries to store and retrieve information.",
+                        "Analyze: Analyze code to identify potential errors and optimize for efficiency.",
+                        "Create: Develop a Python program that simulates a basic inventory management system using lists, tuples, and dictionaries."
+                    ],
+                    "prerequisites": [
+                        "Block:1.1.1",
+                        "Block:1.1.2",
+                        "Block:1.2.1"
+                    ],
+                    "deliverables": [
+                        "Python code for the inventory management system.",
+                        "A brief report (1-2 pages) explaining the code's functionality and design choices."
+                    ],
+                    "upload_required": false,
+                    "supported_filetypes": [
+                        ".py",
+                        ".pdf"
+                    ],
+                    "references": [
+                        {
+                            "title": "Python Data Structures",
+                            "source": "Python Documentation"
+                        },
+                        {
+                            "title": "Control Flow in Python",
+                            "source": "Real Python"
+                        },
+                        {
+                            "title": "Inventory Management System Design",
+                            "source": "GeeksforGeeks"
+                        }
+                    ],
+                    "length": "4-6 hours",
+                    "type": "practical"
+                }
+            },
+            {
+                "week_number": 2,
+                "week_topic": "Data Manipulation with Pandas",
+                "week_modules": [
+                    {
+                        "module_title": "Introduction to Pandas and DataFrames",
+                        "duration_hours": 1.3,
+                        "content_blocks": [
+                            {
+                                "block_title": "Build Data Structures for Data Analysis",
+                                "length": 15,
+                                "type": "theory",
+                                "objectives": [
+                                    "**Define** the fundamental data structures used in **Pandas**, including **Series** and **DataFrames**.",
+                                    "**Differentiate** between various methods for organizing data within **Pandas** using lists and dictionaries.",
+                                    "**Construct** basic **Pandas Series** and **DataFrames** from different data inputs.",
+                                    "**Explain** the purpose of different data structures in data analysis."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Introduction to Pandas",
+                                        "source": "Pandas Documentation"
+                                    },
+                                    {
+                                        "title": "Pandas Series vs DataFrames",
+                                        "source": "Real Python"
+                                    },
+                                    {
+                                        "title": "Data Structures in Pandas",
+                                        "source": "Towards Data Science"
+                                    }
+                                ]
+                            },
+                            {
+                                "block_title": "Explore Pandas Series and DataFrames",
+                                "length": 15,
+                                "type": "theory",
+                                "objectives": [
+                                    "**Identify** the key characteristics of **Pandas Series** and **DataFrames**.",
+                                    "**Compare and contrast** **Series** and **DataFrames** in terms of their structure and functionality.",
+                                    "**Explain** the role of indexing and labeling in accessing data within **Pandas Series** and **DataFrames**.",
+                                    "**Describe** the advantages of using **Pandas Series** and **DataFrames** for data manipulation."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Understanding Pandas Series",
+                                        "source": "DataCamp"
+                                    },
+                                    {
+                                        "title": "DataFrames in Pandas",
+                                        "source": "NumPy"
+                                    },
+                                    {
+                                        "title": "Series vs DataFrames",
+                                        "source": "GeeksforGeeks"
+                                    }
+                                ]
+                            },
+                            {
+                                "block_title": "Implement DataFrame Creation from Lists and Dictionaries",
+                                "length": 15,
+                                "type": "exploration",
+                                "objectives": [
+                                    "**Implement** **Pandas DataFrame** creation using lists of lists.",
+                                    "**Implement** **Pandas DataFrame** creation using dictionaries.",
+                                    "**Explain** the differences in data representation when creating **DataFrames** from different data structures.",
+                                    "**Evaluate** the suitability of different creation methods based on data characteristics."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Creating DataFrames from Lists",
+                                        "source": "Pandas Documentation"
+                                    },
+                                    {
+                                        "title": "Creating DataFrames from Dictionaries",
+                                        "source": "Pandas Documentation"
+                                    },
+                                    {
+                                        "title": "DataFrame Creation Methods",
+                                        "source": "Analytics Vidhya"
+                                    }
+                                ]
+                            },
+                            {
+                                "block_title": "Analyze DataFrame Attributes and Information",
+                                "length": 15,
+                                "type": "theory",
+                                "objectives": [
+                                    "**Analyze** **Pandas DataFrame** attributes using the `.info()` method.",
+                                    "**Interpret** the output of the `.info()` method to understand data types and missing values.",
+                                    "**Describe** the purpose of the `.shape` attribute in **Pandas DataFrames**.",
+                                    "**Explain** how to use the `.head()` and `.tail()` methods to inspect data."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Using .info() in Pandas",
+                                        "source": "Towards Data Science"
+                                    },
+                                    {
+                                        "title": "Understanding DataFrame Attributes",
+                                        "source": "Real Python"
+                                    },
+                                    {
+                                        "title": "Inspecting DataFrames",
+                                        "source": "Pandas Documentation"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "module_title": "Data Loading, Cleaning, and Transformation",
+                        "duration_hours": 1.3,
+                        "content_blocks": [
+                            {
+                                "block_title": "Build Data Loading Strategies with Pandas",
+                                "length": 20,
+                                "type": "theory",
+                                "objectives": [
+                                    "**Define** the purpose and advantages of using **Pandas** for data loading.",
+                                    "**Identify** various data file formats (CSV, Excel, JSON) and their respective loading techniques in **Pandas**.",
+                                    "**Apply** **Pandas** functions like `read_csv`, `read_excel`, and `read_json` to load data from different sources.",
+                                    "**Evaluate** the impact of data loading strategies on data integrity and efficiency."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Pandas Documentation",
+                                        "source": "Pandas"
+                                    },
+                                    {
+                                        "title": "Real Python - Pandas Data Loading",
+                                        "source": "Real Python"
+                                    },
+                                    {
+                                        "title": "Towards Data Science - Pandas Data Loading Techniques",
+                                        "source": "Towards Data Science"
+                                    }
+                                ]
+                            },
+                            {
+                                "block_title": "Explore Techniques for Handling Missing Data",
+                                "length": 15,
+                                "type": "theory",
+                                "objectives": [
+                                    "**Define** the concept of *missing data* and its potential impact on data analysis.",
+                                    "**Identify** common methods for detecting missing values using **Pandas** (e.g., `isnull()`, `notnull()`).",
+                                    "**Apply** techniques for handling missing data, including *imputation* (mean, median, mode) and *deletion*.",
+                                    "**Evaluate** the trade-offs between different missing data handling methods."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Scikit-learn Documentation - Handling Missing Data",
+                                        "source": "Scikit-learn"
+                                    },
+                                    {
+                                        "title": "Towards Data Science - Dealing with Missing Data in Pandas",
+                                        "source": "Towards Data Science"
+                                    },
+                                    {
+                                        "title": "Analytics Vidhya - Missing Data Imputation Techniques",
+                                        "source": "Analytics Vidhya"
+                                    }
+                                ]
+                            },
+                            {
+                                "block_title": "Tinker with Data Transformation Methods for Data Preparation",
+                                "length": 20,
+                                "type": "exploration",
+                                "objectives": [
+                                    "**Define** *data transformation* and its importance in data preparation.",
+                                    "**Apply** **Pandas** functions for data cleaning, such as removing duplicates and handling outliers.",
+                                    "**Construct** new features from existing ones using **Pandas** (e.g., creating derived columns).",
+                                    "**Evaluate** the effectiveness of different data transformation techniques in improving data quality."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Pandas Documentation - Data Cleaning",
+                                        "source": "Pandas"
+                                    },
+                                    {
+                                        "title": "Towards Data Science - Data Transformation with Pandas",
+                                        "source": "Towards Data Science"
+                                    },
+                                    {
+                                        "title": "KDnuggets - Data Transformation Techniques",
+                                        "source": "KDnuggets"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "module_title": "Basic Data Analysis with Pandas",
+                        "duration_hours": 1.4,
+                        "content_blocks": [
+                            {
+                                "block_title": "Build DataFrames from Diverse Sources",
+                                "length": 20,
+                                "type": "theory",
+                                "objectives": [
+                                    "**Define** the purpose and structure of **Pandas DataFrames** as a fundamental data manipulation tool.",
+                                    "**Construct** **Pandas DataFrames** from various data sources, including lists, dictionaries, and external files (e.g., CSV).",
+                                    "**Explain** the concept of *data types* within **Pandas DataFrames** and their impact on data analysis."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Pandas Documentation",
+                                        "source": "Pandas"
+                                    },
+                                    {
+                                        "title": "Real Python - Pandas Tutorial",
+                                        "source": "Real Python"
+                                    },
+                                    {
+                                        "title": "Towards Data Science - Introduction to Pandas",
+                                        "source": "Towards Data Science"
+                                    }
+                                ]
+                            },
+                            {
+                                "block_title": "Explore Data Structures and Basic Information",
+                                "length": 20,
+                                "type": "theory",
+                                "objectives": [
+                                    "**Define** the key components and properties of **Pandas DataFrames**, including index, columns, and data values.",
+                                    "**Construct** **Pandas DataFrames** and **Series** to represent structured data effectively.",
+                                    "**Identify** and **describe** common *data structures* used in **Pandas** for data organization."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Pandas Documentation",
+                                        "source": "Pandas"
+                                    },
+                                    {
+                                        "title": "DataCamp - Pandas DataFrames",
+                                        "source": "DataCamp"
+                                    },
+                                    {
+                                        "title": "Analytics Vidhya - Understanding Pandas DataFrames",
+                                        "source": "Analytics Vidhya"
+                                    }
+                                ]
+                            },
+                            {
+                                "block_title": "Tinker with Data Selection and Indexing",
+                                "length": 20,
+                                "type": "exploration",
+                                "objectives": [
+                                    "**Identify** and **apply** various methods for selecting and indexing data within **Pandas DataFrames**.",
+                                    "**Construct** **Pandas DataFrames** using boolean indexing and *loc* and *iloc* for precise data retrieval.",
+                                    "**Evaluate** the efficiency of different indexing techniques for data filtering and manipulation."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Pandas Documentation",
+                                        "source": "Pandas"
+                                    },
+                                    {
+                                        "title": "Towards Data Science - Pandas Data Selection",
+                                        "source": "Towards Data Science"
+                                    },
+                                    {
+                                        "title": "GeeksforGeeks - Pandas Indexing",
+                                        "source": "GeeksforGeeks"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "hours_per_week": 4,
+                "week_milestone": {
+                    "milestone_title": "Pandas Data Analysis Project",
+                    "description": "This project applies Pandas data manipulation techniques to analyze a real-world dataset, enhancing data analysis skills for career advancement. It integrates concepts from all blocks of the week, focusing on data loading, cleaning, transformation, and analysis.",
+                    "objectives": [
+                        "Apply: Apply Pandas functions to clean, transform, and analyze a dataset.",
+                        "Analyze: Analyze a dataset to identify trends and patterns using Pandas."
+                    ],
+                    "prerequisites": [
+                        "Block:2.1.1",
+                        "Block:2.1.2",
+                        "Module:2.2"
+                    ],
+                    "deliverables": [
+                        "Jupyter Notebook containing code and analysis results."
+                    ],
+                    "upload_required": false,
+                    "supported_filetypes": [
+                        ".ipynb",
+                        ".pdf"
+                    ],
+                    "references": [
+                        {
+                            "title": "Pandas Documentation",
+                            "source": "Pandas"
+                        },
+                        {
+                            "title": "Real Python - Pandas Tutorial",
+                            "source": "Real Python"
+                        },
+                        {
+                            "title": "Towards Data Science - Pandas Tutorial",
+                            "source": "Towards Data Science"
+                        }
+                    ],
+                    "length": "4-6 hours",
+                    "type": "practical"
+                }
+            },
+            {
+                "week_number": 3,
+                "week_topic": "Automating Repetitive Tasks",
+                "week_modules": [
+                    {
+                        "module_title": "Introduction to Python Scripting and Functions",
+                        "duration_hours": 1.3,
+                        "content_blocks": [
+                            {
+                                "block_title": "Build Fundamental Scripting Structures",
+                                "length": 20,
+                                "type": "theory",
+                                "objectives": [
+                                    "Define the core concepts of *scripting* and its role in automating tasks.",
+                                    "Identify the essential components of a basic Python script, including comments and code structure.",
+                                    "Construct a simple Python script to perform a basic task, such as printing output or performing a simple calculation.",
+                                    "Evaluate the advantages of using Python for automation compared to other scripting languages."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "What is Scripting?",
+                                        "source": "Investopedia"
+                                    },
+                                    {
+                                        "title": "Introduction to Python",
+                                        "source": "Python.org"
+                                    },
+                                    {
+                                        "title": "Benefits of Python Scripting",
+                                        "source": "Real Python"
+                                    }
+                                ]
+                            },
+                            {
+                                "block_title": "Explore Python Data Types and Variables",
+                                "length": 15,
+                                "type": "exploration",
+                                "objectives": [
+                                    "Define and differentiate between common Python *data types* (integers, floats, strings, booleans).",
+                                    "Identify and utilize variables to store and manipulate data within Python scripts.",
+                                    "Construct expressions using Python *operators* to perform calculations and data transformations.",
+                                    "Evaluate the impact of data type selection on program behavior and efficiency."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Python Data Types",
+                                        "source": "W3Schools"
+                                    },
+                                    {
+                                        "title": "Variables in Python",
+                                        "source": "GeeksforGeeks"
+                                    },
+                                    {
+                                        "title": "Python Operators",
+                                        "source": "Tutorialspoint"
+                                    }
+                                ]
+                            },
+                            {
+                                "block_title": "Build Conditional Logic with Python Statements",
+                                "length": 15,
+                                "type": "theory",
+                                "objectives": [
+                                    "Define *conditional statements* (if, elif, else) and their role in controlling program flow.",
+                                    "Construct Python code using conditional statements to make decisions based on specific conditions.",
+                                    "Identify and apply logical *operators* (and, or, not) to create complex conditional expressions.",
+                                    "Evaluate the importance of conditional logic in creating robust and adaptable programs."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Conditional Statements in Python",
+                                        "source": "Programiz"
+                                    },
+                                    {
+                                        "title": "Python if-else statements",
+                                        "source": "Python.org"
+                                    },
+                                    {
+                                        "title": "Logical Operators in Python",
+                                        "source": "DataCamp"
+                                    }
+                                ]
+                            },
+                            {
+                                "block_title": "Explore Iteration Techniques in Python",
+                                "length": 10,
+                                "type": "exploration",
+                                "objectives": [
+                                    "Define different *iteration techniques* in Python (for loops, while loops).",
+                                    "Construct Python code using for and while loops to repeat specific blocks of code.",
+                                    "Identify appropriate use cases for each iteration technique based on the task requirements.",
+                                    "Evaluate the efficiency and readability of different iteration methods."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "For and While Loops in Python",
+                                        "source": "Real Python"
+                                    },
+                                    {
+                                        "title": "Iteration in Python",
+                                        "source": "TutorialsPoint"
+                                    },
+                                    {
+                                        "title": "Python Loops",
+                                        "source": "W3Schools"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "module_title": "Conditional Statements and Loops",
+                        "duration_hours": 1.3,
+                        "content_blocks": [
+                            {
+                                "block_title": "Build Decision Logic with `if`, `elif`, and `else`",
+                                "length": 20,
+                                "type": "theory",
+                                "objectives": [
+                                    "**Define** the purpose and application of `if`, `elif`, and `else` statements in programming.",
+                                    "**Explain** how conditional statements enable programs to make decisions based on specified conditions.",
+                                    "**Illustrate** the syntax and structure of `if`, `elif`, and `else` statements using practical examples."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Conditional Statements Explained",
+                                        "source": "GeeksforGeeks"
+                                    },
+                                    {
+                                        "title": "Understanding if, else, and elif in Python",
+                                        "source": "Real Python"
+                                    },
+                                    {
+                                        "title": "Decision Making in Programming",
+                                        "source": "Khan Academy"
+                                    }
+                                ]
+                            },
+                            {
+                                "block_title": "Explore Control Flow with `if` Statements and Boolean Expressions",
+                                "length": 15,
+                                "type": "exploration",
+                                "objectives": [
+                                    "**Identify** the components of a boolean expression and their role in conditional statements.",
+                                    "**Apply** boolean operators (and, or, not) to create complex conditional logic.",
+                                    "**Analyze** how boolean expressions influence the outcome of `if` statements."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Boolean Operators",
+                                        "source": "W3Schools"
+                                    },
+                                    {
+                                        "title": "Python Boolean Operators",
+                                        "source": "Python Documentation"
+                                    },
+                                    {
+                                        "title": "Logic and Conditional Expressions",
+                                        "source": "TutorialsPoint"
+                                    }
+                                ]
+                            },
+                            {
+                                "block_title": "Build Iterative Processes with `for` Loops",
+                                "length": 15,
+                                "type": "theory",
+                                "objectives": [
+                                    "**Describe** the concept of a `for` loop and its use in iterating over sequences.",
+                                    "**Construct** `for` loops to process elements within lists, strings, and ranges.",
+                                    "**Evaluate** the efficiency of `for` loops for repetitive tasks."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "For Loops in Python",
+                                        "source": "Python Tutorial"
+                                    },
+                                    {
+                                        "title": "Iteration with For Loops",
+                                        "source": "Programiz"
+                                    },
+                                    {
+                                        "title": "Understanding For Loops",
+                                        "source": "Educative.io"
+                                    }
+                                ]
+                            },
+                            {
+                                "block_title": "Explore Iterative Processes with `while` Loops",
+                                "length": 10,
+                                "type": "exploration",
+                                "objectives": [
+                                    "**Define** the purpose of a `while` loop and its use in repeating code blocks.",
+                                    "**Design** `while` loops with clear exit conditions to avoid infinite loops.",
+                                    "**Compare** and **contrast** `for` and `while` loops for different programming scenarios."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "While Loops in Python",
+                                        "source": "Python Tutorial"
+                                    },
+                                    {
+                                        "title": "Using While Loops",
+                                        "source": "TutorialsPoint"
+                                    },
+                                    {
+                                        "title": "When to Use For vs. While Loops",
+                                        "source": "Coding Practices"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "module_title": "Automating File Operations and System Tasks",
+                        "duration_hours": 1.4,
+                        "content_blocks": [
+                            {
+                                "block_title": "Automate File Reading with Python",
+                                "length": 20,
+                                "type": "theory",
+                                "objectives": [
+                                    "**Define** the purpose of file reading in programming and its importance in data processing.",
+                                    "**Explain** the different file modes (read, write, append) and their appropriate use cases.",
+                                    "**Demonstrate** how to use the **open()** function in **Python** to open files for reading and handle potential errors.",
+                                    "**Identify** common file formats (text, CSV, JSON) and the techniques for reading data from them."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Python File Handling",
+                                        "source": "Python Documentation"
+                                    },
+                                    {
+                                        "title": "Reading Text Files in Python",
+                                        "source": "Real Python"
+                                    },
+                                    {
+                                        "title": "CSV Reading in Python",
+                                        "source": "GeeksforGeeks"
+                                    }
+                                ]
+                            },
+                            {
+                                "block_title": "Automate File Writing and Appending Data",
+                                "length": 15,
+                                "type": "theory",
+                                "objectives": [
+                                    "**Define** the concepts of file writing and appending data to existing files.",
+                                    "**Explain** the different file modes (write, append, exclusive creation) and their implications.",
+                                    "**Demonstrate** how to use the **write()** and **write()** methods in **Python** to create and modify files.",
+                                    "**Construct** simple scripts to append data to existing log files or data files."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Writing to Files in Python",
+                                        "source": "Python Documentation"
+                                    },
+                                    {
+                                        "title": "Appending to Files in Python",
+                                        "source": "TutorialsPoint"
+                                    },
+                                    {
+                                        "title": "File Modes in Python",
+                                        "source": "Programiz"
+                                    }
+                                ]
+                            },
+                            {
+                                "block_title": "Automate Directory Management Tasks",
+                                "length": 15,
+                                "type": "theory",
+                                "objectives": [
+                                    "**Define** the purpose of directory management in organizing files and data.",
+                                    "**Explain** how to use the **os** and **pathlib** modules in **Python** for directory operations.",
+                                    "**Demonstrate** how to create, delete, rename, and list directories using **Python** code.",
+                                    "**Construct** scripts to automate tasks such as creating backup directories or cleaning up old files."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Directory Manipulation in Python",
+                                        "source": "Real Python"
+                                    },
+                                    {
+                                        "title": "Python os module",
+                                        "source": "Python Documentation"
+                                    },
+                                    {
+                                        "title": "Pathlib Module in Python",
+                                        "source": "GeeksforGeeks"
+                                    }
+                                ]
+                            },
+                            {
+                                "block_title": "Automate System Information Retrieval",
+                                "length": 10,
+                                "type": "theory",
+                                "objectives": [
+                                    "**Define** the importance of retrieving system information for automation and monitoring.",
+                                    "**Explain** how to use the **os** module in **Python** to access system information (e.g., CPU, memory, disk space).",
+                                    "**Demonstrate** how to extract and display system information using **Python** code.",
+                                    "**Identify** common system information parameters and their relevance in automation scenarios."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Getting System Information in Python",
+                                        "source": "Towards Data Science"
+                                    },
+                                    {
+                                        "title": "Python os module",
+                                        "source": "Python Documentation"
+                                    },
+                                    {
+                                        "title": "System Information Retrieval",
+                                        "source": "Wikipedia"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "hours_per_week": 4,
+                "week_milestone": {
+                    "milestone_title": "Automate Tasks with Python",
+                    "description": "This milestone integrates the week's learning by having you automate repetitive tasks using Python scripting. You will build a script to automate file operations, system information retrieval, and directory management, applying conditional logic and loops. This project is designed to enhance your job prospects by developing practical, in-demand skills.",
+                    "objectives": [
+                        "Apply: Write Python code to automate file operations, including reading, writing, and appending data.",
+                        "Analyze: Analyze system information using Python and extract relevant details.",
+                        "Create: Develop a Python script to automate directory management tasks, such as creating, renaming, and deleting directories."
+                    ],
+                    "prerequisites": [
+                        "Block:3.1.1",
+                        "Block:3.1.2",
+                        "Block:3.1.3",
+                        "Block:3.1.4"
+                    ],
+                    "deliverables": [
+                        "Python script (.py file) automating file operations, system information retrieval, and directory management.",
+                        "A brief report (Word or PDF) explaining the script's functionality, design choices, and potential applications."
+                    ],
+                    "upload_required": false,
+                    "supported_filetypes": [
+                        ".py",
+                        ".pdf",
+                        ".docx"
+                    ],
+                    "references": [
+                        {
+                            "title": "Automating File Tasks with Python",
+                            "source": "Real Python"
+                        },
+                        {
+                            "title": "Python File Handling",
+                            "source": "Python Documentation"
+                        },
+                        {
+                            "title": "Directory Management in Python",
+                            "source": "GeeksforGeeks"
+                        }
+                    ],
+                    "length": "4-6 hours",
+                    "type": "practical"
+                }
+            },
+            {
+                "week_number": 4,
+                "week_topic": "Data Visualization and Workflow Automation",
+                "week_modules": [
+                    {
+                        "module_title": "Data Visualization with Matplotlib and Seaborn",
+                        "duration_hours": 1.3,
+                        "content_blocks": [
+                            {
+                                "block_title": "Build Foundational Plots with Matplotlib",
+                                "length": 20,
+                                "type": "theory",
+                                "objectives": [
+                                    "**Define** the purpose and importance of data visualization in the context of data analysis and communication.",
+                                    "**Identify** common types of charts and graphs suitable for different data types and analytical goals using **Matplotlib**.",
+                                    "**Explain** the basic components of a **Matplotlib** plot and how to customize plot elements like titles, labels, and legends.",
+                                    "**Apply** **Matplotlib** to create foundational plots, including line plots, scatter plots, and bar charts, to visualize data patterns."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Data Visualization with Python",
+                                        "source": "Seaborn Documentation"
+                                    },
+                                    {
+                                        "title": "Introduction to Matplotlib",
+                                        "source": "Real Python"
+                                    },
+                                    {
+                                        "title": "Creating Effective Visualizations",
+                                        "source": "Storytelling with Data"
+                                    }
+                                ]
+                            },
+                            {
+                                "block_title": "Explore Statistical Distributions with Seaborn Histograms and KDE Plots",
+                                "length": 15,
+                                "type": "exploration",
+                                "objectives": [
+                                    "**Describe** the concept of statistical distributions and their significance in data analysis.",
+                                    "**Construct** histograms and Kernel Density Estimates (KDE plots) using **Seaborn** to visualize the distribution of single and multiple variables.",
+                                    "**Interpret** the shape, center, and spread of distributions visualized with **Seaborn** plots.",
+                                    "**Compare** and **contrast** different statistical distributions and their implications for data interpretation."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Understanding Statistical Distributions",
+                                        "source": "Statistics By Example"
+                                    },
+                                    {
+                                        "title": "Data Visualization using Seaborn",
+                                        "source": "Towards Data Science"
+                                    },
+                                    {
+                                        "title": "Histograms and KDE Plots",
+                                        "source": "Seaborn Documentation"
+                                    }
+                                ]
+                            },
+                            {
+                                "block_title": "Deploy Visualizations for Data Exploration and Insights",
+                                "length": 25,
+                                "type": "theory",
+                                "objectives": [
+                                    "**Evaluate** the effectiveness of different visualization techniques for communicating data insights to diverse audiences.",
+                                    "**Design** data visualizations using **Matplotlib** and **Seaborn** to effectively explore data and communicate findings.",
+                                    "**Apply** best practices for data visualization, including color choices, labeling, and layout, to enhance clarity and impact.",
+                                    "**Critique** existing data visualizations for their strengths and weaknesses in conveying information."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Principles of Data Visualization",
+                                        "source": "Edward Tufte"
+                                    },
+                                    {
+                                        "title": "Data Visualization Best Practices",
+                                        "source": "Tableau"
+                                    },
+                                    {
+                                        "title": "Communicating Data Effectively",
+                                        "source": "Harvard Business Review"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "module_title": "Creating Automated Data Processing Workflows",
+                        "duration_hours": 1.3,
+                        "content_blocks": [
+                            {
+                                "block_title": "Build a Modular Data Pipeline with Python",
+                                "length": 20,
+                                "type": "theory",
+                                "objectives": [
+                                    "**Define** the components of a data pipeline and **explain** their roles in data processing.",
+                                    "**Construct** a basic data pipeline using **Python** and libraries like **Pandas** for data ingestion and transformation.",
+                                    "**Illustrate** how to create reusable modules for different data processing tasks to improve pipeline maintainability.",
+                                    "**Identify** best practices for modular design in data pipelines."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Building Data Pipelines with Python",
+                                        "source": "Towards Data Science"
+                                    },
+                                    {
+                                        "title": "Modular Data Pipelines",
+                                        "source": "DataCamp"
+                                    },
+                                    {
+                                        "title": "Python for Data Engineering",
+                                        "source": "O'Reilly Media"
+                                    }
+                                ]
+                            },
+                            {
+                                "block_title": "Deploy Data Processing Scripts to a Cloud Platform",
+                                "length": 20,
+                                "type": "theory",
+                                "objectives": [
+                                    "**Define** the concepts of cloud platforms (e.g., **AWS**, **Azure**, **GCP**) and their relevance to data processing.",
+                                    "**Construct** a plan for deploying **Python** data processing scripts to a chosen cloud platform.",
+                                    "**Illustrate** the steps involved in deploying scripts using services like **AWS Lambda** or **Azure Functions**.",
+                                    "**Evaluate** the benefits and drawbacks of different cloud deployment options for data pipelines."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Deploying Data Pipelines on AWS",
+                                        "source": "AWS Documentation"
+                                    },
+                                    {
+                                        "title": "Azure Functions for Data Processing",
+                                        "source": "Microsoft Learn"
+                                    },
+                                    {
+                                        "title": "Google Cloud Functions for Data Pipelines",
+                                        "source": "Google Cloud Blog"
+                                    }
+                                ]
+                            },
+                            {
+                                "block_title": "Audit and Optimize Automated Data Processing Scripts",
+                                "length": 20,
+                                "type": "theory",
+                                "objectives": [
+                                    "**Define** key metrics for evaluating the performance and efficiency of data processing scripts.",
+                                    "**Construct** a process for auditing data pipelines to identify bottlenecks and areas for improvement.",
+                                    "**Illustrate** techniques for optimizing **Python** code for performance, including *profiling* and *caching*.",
+                                    "**Critique** the impact of data quality on data processing pipeline efficiency and propose solutions."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Optimizing Python Data Pipelines",
+                                        "source": "Real Python"
+                                    },
+                                    {
+                                        "title": "Data Pipeline Monitoring and Alerting",
+                                        "source": "Datadog"
+                                    },
+                                    {
+                                        "title": "Improving Data Processing Performance",
+                                        "source": "InfoQ"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "module_title": "Writing Clean and Maintainable Python Code",
+                        "duration_hours": 1.4,
+                        "content_blocks": [
+                            {
+                                "block_title": "Build Modular Functions for Reusability",
+                                "length": 20,
+                                "type": "theory",
+                                "objectives": [
+                                    "**Define** the concept of *modular programming* and its benefits for code organization and reusability.",
+                                    "**Construct** well-defined functions with clear inputs and outputs to promote code modularity.",
+                                    "**Explain** how to apply *function decomposition* to break down complex tasks into smaller, manageable units.",
+                                    "**Identify** opportunities for code reuse through function creation, enhancing efficiency and maintainability."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Principles of Python Programming",
+                                        "source": "Python.org"
+                                    },
+                                    {
+                                        "title": "Clean Code",
+                                        "source": "Robert C. Martin"
+                                    },
+                                    {
+                                        "title": "Effective Python",
+                                        "source": "Carl Albing, Tom Holt"
+                                    }
+                                ]
+                            },
+                            {
+                                "block_title": "Deploy Consistent Coding Style with Linters",
+                                "length": 20,
+                                "type": "theory",
+                                "objectives": [
+                                    "**Define** the purpose and benefits of using *code linters* for maintaining consistent coding style.",
+                                    "**Construct** a **flake8** or **black** configuration file to enforce coding standards within a project.",
+                                    "**Explain** how to integrate a linter into a **VS Code** or **PyCharm** development environment for real-time feedback.",
+                                    "**Evaluate** the impact of consistent coding style on code readability, collaboration, and bug prevention."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "PEP 8 Style Guide",
+                                        "source": "Python.org"
+                                    },
+                                    {
+                                        "title": "Introduction to Linting",
+                                        "source": "SonarSource"
+                                    },
+                                    {
+                                        "title": "Using Flake8",
+                                        "source": "Flake8 Documentation"
+                                    }
+                                ]
+                            },
+                            {
+                                "block_title": "Explore Docstrings and Type Hints for Clarity",
+                                "length": 20,
+                                "type": "exploration",
+                                "objectives": [
+                                    "**Define** the purpose and syntax of *docstrings* for documenting Python code.",
+                                    "**Construct** comprehensive docstrings for functions, classes, and modules to improve code understanding.",
+                                    "**Explain** the benefits of using *type hints* in **Python** for enhancing code readability and enabling static analysis.",
+                                    "**Critique** code examples with and without docstrings and type hints, assessing their impact on maintainability and collaboration."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Python Docstring Guide",
+                                        "source": "Python.org"
+                                    },
+                                    {
+                                        "title": "Type Hints in Python",
+                                        "source": "Python.org"
+                                    },
+                                    {
+                                        "title": "Writing Effective Docstrings",
+                                        "source": "Real Python"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "hours_per_week": 4,
+                "week_milestone": {
+                    "milestone_title": "Data Visualization & Automation Project",
+                    "description": "This milestone integrates data visualization techniques using Matplotlib and Seaborn with automated data processing workflows in Python. It culminates in a project that visualizes a dataset, automates its processing, and ensures clean, maintainable code. This directly addresses the week's learning objectives and aligns with career-focused skills.",
+                    "objectives": [
+                        "Apply: Create visualizations to explore data distributions and patterns.",
+                        "Analyze: Design and implement a modular data pipeline for automated data processing.",
+                        "Create: Develop well-documented and maintainable Python code for data manipulation and analysis."
+                    ],
+                    "prerequisites": [
+                        "Block:4.1.1",
+                        "Block:4.2.1",
+                        "Module:4.3.1"
+                    ],
+                    "deliverables": [
+                        "Python script: Automated data processing pipeline.",
+                        "Jupyter Notebook: Data visualization and analysis report.",
+                        "README file: Project description and instructions."
+                    ],
+                    "upload_required": false,
+                    "supported_filetypes": [
+                        ".py",
+                        ".ipynb",
+                        ".pdf",
+                        ".md"
+                    ],
+                    "references": [
+                        {
+                            "title": "Effective Data Visualization",
+                            "source": "Cleveland"
+                        },
+                        {
+                            "title": "Python Data Handling",
+                            "source": "Wickstone"
+                        },
+                        {
+                            "title": "Clean Code",
+                            "source": "Martin"
+                        }
+                    ],
+                    "length": "120-180 minutes",
+                    "type": "practical"
+                }
+            }
+        ],
+        "course_milestone": {
+            "milestone_title": "Automated Sales Insights Project",
+            "description": "This milestone involves creating an automated data processing and visualization pipeline to analyze sales data. You will leverage Python fundamentals, Pandas for data manipulation, automation techniques, and data visualization libraries to generate actionable insights for a hypothetical business.",
+            "objectives": [
+                "Apply: Apply Python scripting and Pandas data manipulation techniques to process and clean real-world sales data.",
+                "Analyze: Analyze sales data to identify trends, patterns, and key performance indicators (KPIs).",
+                "Create: Create automated data processing workflows and insightful visualizations to communicate sales findings."
+            ],
+            "prerequisites": [
+                "Basic computer literacy and familiarity with command-line interfaces.",
+                "Introductory understanding of programming concepts like variables and conditional statements (e.g., Codecademy's introductory Python course)."
+            ],
+            "deliverables": [
+                "Python script (sales_analysis.py) containing the automated data processing and visualization pipeline.",
+                "Jupyter Notebook (sales_insights.ipynb) documenting the analysis process, findings, and visualizations.",
+                "Presentation slides (sales_presentation.pptx) summarizing the key sales insights and recommendations."
+            ],
+            "upload_required": false,
+            "supported_filetypes": [
+                ".py",
+                ".ipynb",
+                ".pptx"
+            ],
+            "references": [
+                {
+                    "title": "Data Visualization with Python",
+                    "source": "Towards Data Science"
+                },
+                {
+                    "title": "Pandas Documentation",
+                    "source": "Pandas"
+                },
+                {
+                    "title": "Automating Tasks with Python",
+                    "source": "Real Python"
+                },
+                {
+                    "title": "Building Data Pipelines with Python",
+                    "source": "Analytics Vidhya"
+                }
+            ],
+            "length": "60-80 hours",
+            "type": "practical"
+        }
+    }
+}

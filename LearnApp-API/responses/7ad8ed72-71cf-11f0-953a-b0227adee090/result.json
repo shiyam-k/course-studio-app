@@ -1,0 +1,1034 @@
+{
+  "course_outline": {
+    "title": "Mastering Python Basics: Launch Your Coding Career",
+    "overview": "Embark on a dynamic learning journey to build a solid foundation in Python programming, empowering you with the essential skills to kickstart your career in tech. This quick-start course is designed to equip you with practical, job-ready knowledge, making you an attractive candidate for entry-level programming roles.",
+    "prerequisites": [
+      "Basic computer literacy (navigating files and folders)",
+      "A desire to learn problem-solving"
+    ],
+    "total_weeks": 4,
+    "learning_outcomes": [
+      "Identify fundamental **Python** syntax and data types for effective program construction.",
+      "Explain the purpose and application of control flow structures (**if/else**, loops) to guide program execution.",
+      "Implement basic **Python** scripts to solve simple computational problems efficiently.",
+      "Analyze and debug common errors in **Python** programs to ensure functionality and reliability.",
+      "Develop a small, functional **Python** application demonstrating core programming concepts, suitable for a professional portfolio."
+    ],
+    "skills": [
+      "**Python** Syntax Fundamentals",
+      "Variables & Data Types (**int**, **str**, **float**, **bool**)",
+      "Operators (Arithmetic, Logical, Comparison)",
+      "Conditional Statements (*if*, *elif*, *else*)",
+      "Looping Constructs (*for*, *while*)",
+      "Function Definition & Invocation",
+      "Working with Lists & Tuples",
+      "Managing Dictionaries & Sets",
+      "Basic String Manipulation",
+      "File Input/Output (I/O)",
+      "Error Handling (*try/except* blocks)",
+      "Basic Debugging Techniques",
+      "Algorithmic Thinking",
+      "Problem-Solving with **Python**",
+      "Code Readability & Best Practices"
+    ],
+    "weeks": [
+      {
+        "week_number": 1,
+        "week_topic": "Your First Lines of Code: Building a Strong Foundation",
+        "week_modules": [
+          {
+            "module_title": "Setting Up Your Python Environment",
+            "duration_hours": 1.0,
+            "content_blocks": [
+              {
+                "block_title": "Prepare Your Python Workspace",
+                "length": 30,
+                "type": "exploration",
+                "objectives": [
+                  "Install **Python** on your operating system.",
+                  "Configure a basic Integrated Development Environment (**IDE**) for **Python** development."
+                ],
+                "references": [
+                  {
+                    "title": "Installing Python: A Step-by-Step Guide : Real Python",
+                    "source": "RealPython.com"
+                  },
+                  {
+                    "title": "Getting Started with VS Code for Python : Microsoft Docs",
+                    "source": "Docs.Microsoft.com"
+                  },
+                  {
+                    "title": "What is an IDE? : freeCodeCamp",
+                    "source": "freeCodeCamp.org"
+                  }
+                ]
+              },
+              {
+                "block_title": "Write Your First Python Script",
+                "length": 30,
+                "type": "theory",
+                "objectives": [
+                  "Define the basic structure of a **Python** script.",
+                  "Execute a simple 'Hello, World!' program using the **print()** function."
+                ],
+                "references": [
+                  {
+                    "title": "Your First Python Program : LearnPython.org",
+                    "source": "LearnPython.org"
+                  },
+                  {
+                    "title": "Understanding the Print Function in Python : GeeksforGeeks",
+                    "source": "GeeksforGeeks.org"
+                  },
+                  {
+                    "title": "Python Scripting for Beginners : Codecademy",
+                    "source": "Codecademy.com"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "module_title": "Understanding Python Data",
+            "duration_hours": 1.0,
+            "content_blocks": [
+              {
+                "block_title": "Identify Basic Data Types",
+                "length": 30,
+                "type": "theory",
+                "objectives": [
+                  "Describe the common **Python** data types: **integers**, **floats**, **strings**, and **booleans**.",
+                  "Differentiate between mutable and immutable data types in **Python**."
+                ],
+                "references": [
+                  {
+                    "title": "Python Data Types: An Overview : Programiz",
+                    "source": "Programiz.com"
+                  },
+                  {
+                    "title": "Understanding Python's Numeric Types : W3Schools",
+                    "source": "W3Schools.com"
+                  },
+                  {
+                    "title": "Strings in Python : TutorialsPoint",
+                    "source": "TutorialsPoint.com"
+                  }
+                ]
+              },
+              {
+                "block_title": "Construct Variables and Values",
+                "length": 30,
+                "type": "exploration",
+                "objectives": [
+                  "Define variables to store different data types in **Python**.",
+                  "Apply best practices for naming variables for readability and maintainability."
+                ],
+                "references": [
+                  {
+                    "title": "Python Variables : GeeksforGeeks",
+                    "source": "GeeksforGeeks.org"
+                  },
+                  {
+                    "title": "Rules for Naming Variables in Python : FavTutor",
+                    "source": "FavTutor.com"
+                  },
+                  {
+                    "title": "How to Assign Values to Variables in Python : Guru99",
+                    "source": "Guru99.com"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "module_title": "Executing Basic Operations",
+            "duration_hours": 1.0,
+            "content_blocks": [
+              {
+                "block_title": "Apply Arithmetic and Comparison Operators",
+                "length": 30,
+                "type": "exploration",
+                "objectives": [
+                  "Utilize **Python's** arithmetic operators (+, -, *, /, %, **) for calculations.",
+                  "Employ comparison operators (==, !=, >, <, >=, <=) to evaluate relationships between values."
+                ],
+                "references": [
+                  {
+                    "title": "Python Operators: A Complete Guide : PrepBytes",
+                    "source": "PrepBytes.com"
+                  },
+                  {
+                    "title": "Arithmetic Operators in Python : Towards Data Science",
+                    "source": "TowardsDataScience.com"
+                  },
+                  {
+                    "title": "Comparison Operators in Python : PythonForBeginners.com",
+                    "source": "PythonForBeginners.com"
+                  }
+                ]
+              },
+              {
+                "block_title": "Evaluate Boolean Logic",
+                "length": 30,
+                "type": "theory",
+                "objectives": [
+                  "Explain the concepts of **True** and **False** in **Boolean** logic.",
+                  "Construct simple **Boolean** expressions using **logical operators** (**and**, **or**, **not**)."
+                ],
+                "references": [
+                  {
+                    "title": "Python Booleans : W3Schools",
+                    "source": "W3Schools.com"
+                  },
+                  {
+                    "title": "Understanding Logical Operators in Python : Python Guides",
+                    "source": "PythonGuides.com"
+                  },
+                  {
+                    "title": "Python Tutorial: Boolean Operators : Tutorial Republic",
+                    "source": "TutorialRepublic.com"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "hours_per_week": 0,
+        "week_milestone": {
+          "milestone_title": "Prototype a Basic Calculator Script",
+          "description": "Develop a simple **Python** script that performs basic arithmetic operations based on user input. This project will solidify your understanding of variables, data types, and operators, laying the groundwork for more complex programs. It serves as an excellent foundational piece for your career-focused portfolio.",
+          "objectives": [
+            "Apply learned concepts of variables and data types to store numerical input.",
+            "Implement arithmetic operators to perform addition, subtraction, multiplication, and division.",
+            "Construct a working **Python** script that accepts user input and displays calculated results."
+          ],
+          "prerequisites": [
+            "Module:1.1",
+            "Module:1.2",
+            "Module:1.3"
+          ],
+          "deliverables": [
+            "A functional **Python** script (.py file) that acts as a basic calculator."
+          ],
+          "upload_required": true,
+          "supported_filetypes": [
+            ".py"
+          ],
+          "references": [
+            {
+              "title": "Python User Input: Getting Started : Real Python",
+              "source": "RealPython.com"
+            },
+            {
+              "title": "Building a Simple Calculator in Python : Guru99",
+              "source": "Guru99.com"
+            },
+            {
+              "title": "How to Convert String to Int in Python : Stack Abuse",
+              "source": "StackAbuse.com"
+            },
+            {
+              "title": "Python Print Formatting: The Basics : FreeCodeCamp",
+              "source": "FreeCodeCamp.org"
+            }
+          ],
+          "length": "60 minutes",
+          "type": "exploration"
+        }
+      },
+      {
+        "week_number": 2,
+        "week_topic": "Controlling the Flow: Decisions, Repetition & Problem-Solving",
+        "week_modules": [
+          {
+            "module_title": "Implement Decision-Making with Conditional Statements",
+            "duration_hours": 1.5,
+            "content_blocks": [
+              {
+                "block_title": "Define Conditional Logic: The Basic `if` Statement",
+                "length": 30,
+                "type": "theory",
+                "objectives": [
+                  "Define the purpose and syntax of the `if` statement in Python.",
+                  "Construct a simple conditional statement to execute code based on a condition."
+                ],
+                "references": [
+                  {
+                    "title": "Python If-Else Statement Tutorial",
+                    "source": "Programiz"
+                  },
+                  {
+                    "title": "Conditional Statements in Python",
+                    "source": "GeeksforGeeks"
+                  }
+                ]
+              },
+              {
+                "block_title": "Construct Branching Paths: Using `if-else` and `elif`",
+                "length": 45,
+                "type": "exploration",
+                "objectives": [
+                  "Construct `if-else` statements to handle alternative conditions.",
+                  "Implement `elif` to manage multiple branching scenarios.",
+                  "Apply nested conditional statements to solve multi-layered decision problems."
+                ],
+                "references": [
+                  {
+                    "title": "Python If...Else - GeeksforGeeks",
+                    "source": "GeeksforGeeks"
+                  },
+                  {
+                    "title": "Python Conditional Statements: if, elif, else",
+                    "source": "W3Schools"
+                  },
+                  {
+                    "title": "Mastering Conditional Logic in Python",
+                    "source": "Real Python"
+                  }
+                ]
+              },
+              {
+                "block_title": "Apply Logical Operators: Combining Multiple Conditions",
+                "length": 15,
+                "type": "exploration",
+                "objectives": [
+                  "Apply logical operators (**and**, **or**, **not**) to form complex conditions.",
+                  "Construct conditional statements that evaluate multiple criteria effectively."
+                ],
+                "references": [
+                  {
+                    "title": "Python Logical Operators Explained",
+                    "source": "TutorialsPoint"
+                  },
+                  {
+                    "title": "Understanding Python Logical Operators",
+                    "source": "PythonForBeginners"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "module_title": "Automate Repetitive Tasks with Loops",
+            "duration_hours": 1.5,
+            "content_blocks": [
+              {
+                "block_title": "Implement Iteration: The `for` Loop for Sequences",
+                "length": 30,
+                "type": "theory",
+                "objectives": [
+                  "Define the concept of iteration and the use of `for` loops.",
+                  "Construct `for` loops to iterate over sequences like strings and lists."
+                ],
+                "references": [
+                  {
+                    "title": "Python For Loops",
+                    "source": "W3Schools"
+                  },
+                  {
+                    "title": "Understanding Python's 'for' Loop",
+                    "source": "Real Python"
+                  }
+                ]
+              },
+              {
+                "block_title": "Control Repetition: The `while` Loop for Dynamic Conditions",
+                "length": 45,
+                "type": "exploration",
+                "objectives": [
+                  "Construct `while` loops to repeat actions based on dynamic conditions.",
+                  "Identify scenarios where a `while` loop is more appropriate than a `for` loop.",
+                  "Debug common issues in `while` loops, such as infinite loops."
+                ],
+                "references": [
+                  {
+                    "title": "Python While Loops",
+                    "source": "Programiz"
+                  },
+                  {
+                    "title": "When to Use a For Loop vs. a While Loop",
+                    "source": "Educative"
+                  },
+                  {
+                    "title": "Avoiding Infinite Loops in Python",
+                    "source": "Stack Overflow Insights"
+                  }
+                ]
+              },
+              {
+                "block_title": "Refine Loop Control: Using `break` and `continue` Statements",
+                "length": 15,
+                "type": "exploration",
+                "objectives": [
+                  "Apply `break` to exit loops prematurely based on a condition.",
+                  "Implement `continue` to skip the remainder of a loop iteration.",
+                  "Evaluate the impact of `break` and `continue` on loop execution flow."
+                ],
+                "references": [
+                  {
+                    "title": "Python break and continue",
+                    "source": "Python Guides"
+                  },
+                  {
+                    "title": "Controlling Loops in Python: A Comprehensive Guide",
+                    "source": "DigitalOcean"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "module_title": "Solve Problems Using Flow Control Logic",
+            "duration_hours": 1.0,
+            "content_blocks": [
+              {
+                "block_title": "Design Simple Algorithms: From Flowchart to Python Code",
+                "length": 30,
+                "type": "theory",
+                "objectives": [
+                  "Design a basic algorithm for a given problem using pseudocode or flowcharts.",
+                  "Translate algorithmic steps into executable **Python** code using conditionals and loops."
+                ],
+                "references": [
+                  {
+                    "title": "Introduction to Algorithms in Python",
+                    "source": "Towards Data Science"
+                  },
+                  {
+                    "title": "Python Flowchart Basics",
+                    "source": "Guru99"
+                  }
+                ]
+              },
+              {
+                "block_title": "Debug Control Flow: Tracing Program Execution",
+                "length": 30,
+                "type": "exploration",
+                "objectives": [
+                  "Analyze the flow of control within **Python** programs containing conditionals and loops.",
+                  "Debug common logical errors in flow control by tracing variable values and execution paths."
+                ],
+                "references": [
+                  {
+                    "title": "Debugging Python Programs",
+                    "source": "Real Python"
+                  },
+                  {
+                    "title": "Common Python Errors for Beginners",
+                    "source": "Datacamp"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "hours_per_week": 0,
+        "week_milestone": {
+          "milestone_title": "Build a Simple Interactive Console Program",
+          "description": "Apply your understanding of conditional logic and looping constructs to create a basic interactive command-line tool. This project will challenge you to design user input, make decisions based on that input, and repeat actions, simulating a real-world, job-relevant application.",
+          "objectives": [
+            "Apply conditional statements (`if`, `elif`, `else`) to handle diverse user inputs and program states.",
+            "Construct iterative solutions (`for`, `while`) to enable repeated actions or menu navigation.",
+            "Analyze a problem statement and design a basic interactive program flow using learned concepts."
+          ],
+          "prerequisites": [
+            "Module:2.1",
+            "Module:2.2",
+            "Block:2.3.1"
+          ],
+          "deliverables": [
+            "A single **Python** source file (e.g., `interactive_tool.py`) demonstrating the interactive program.",
+            "A brief `README.md` file explaining the program's functionality and how to run it."
+          ],
+          "upload_required": true,
+          "supported_filetypes": [
+            ".py",
+            ".md"
+          ],
+          "references": [
+            {
+              "title": "Building Command-Line Interfaces with Python",
+              "source": "Python Central"
+            },
+            {
+              "title": "Python `input()` function for Interactive Programs",
+              "source": "GeeksforGeeks"
+            },
+            {
+              "title": "Best Practices for Python Readme Files",
+              "source": "Towards Data Science"
+            },
+            {
+              "title": "Structuring Your Python Project",
+              "source": "The Hitchhiker's Guide to Python!"
+            }
+          ],
+          "length": "90 minutes",
+          "type": "exploration"
+        }
+      },
+      {
+        "week_number": 3,
+        "week_topic": "Organizing Your Code: Functions, Lists & Dictionaries for Efficiency",
+        "week_modules": [
+          {
+            "module_title": "Mastering Functions for Reusability",
+            "duration_hours": 1.5,
+            "content_blocks": [
+              {
+                "block_title": "Define Custom Functions for Modular Code",
+                "length": 40,
+                "type": "theory",
+                "objectives": [
+                  "Define a function using the `def` keyword in **Python**.",
+                  "Explain the benefits of using functions for code reusability and organization.",
+                  "Construct simple functions without parameters or return values."
+                ],
+                "references": [
+                  {
+                    "title": "Defining Functions in Python : Real Python",
+                    "source": "Real Python"
+                  },
+                  {
+                    "title": "Python Functions Explained : Programiz",
+                    "source": "Programiz"
+                  },
+                  {
+                    "title": "Modular Programming with Functions : GeeksforGeeks",
+                    "source": "GeeksforGeeks"
+                  }
+                ]
+              },
+              {
+                "block_title": "Implement Functions with Arguments and Return Values",
+                "length": 30,
+                "type": "exploration",
+                "objectives": [
+                  "Pass arguments to **Python** functions to customize their behavior.",
+                  "Return values from functions to use their results in other parts of a program.",
+                  "Construct functions that accept multiple arguments and return a single result."
+                ],
+                "references": [
+                  {
+                    "title": "Arguments in Python Functions : Python for Everybody",
+                    "source": "Py4E"
+                  },
+                  {
+                    "title": "Understanding Return Statements : W3Schools",
+                    "source": "W3Schools"
+                  },
+                  {
+                    "title": "Python Function Arguments and Return Values : Educative",
+                    "source": "Educative"
+                  }
+                ]
+              },
+              {
+                "block_title": "Apply Built-in Functions for Efficient Operations",
+                "length": 20,
+                "type": "exploration",
+                "objectives": [
+                  "Utilize common built-in **Python** functions like `len()`, `min()`, `max()`, and `sum()`.",
+                  "Identify scenarios where built-in functions can simplify code and improve efficiency.",
+                  "Construct code snippets that effectively use built-in functions for data manipulation."
+                ],
+                "references": [
+                  {
+                    "title": "Python Built-in Functions : Official Python Docs",
+                    "source": "Python.org"
+                  },
+                  {
+                    "title": "A Guide to Python Built-in Functions : Analytics Vidhya",
+                    "source": "Analytics Vidhya"
+                  },
+                  {
+                    "title": "Essential Python Built-in Functions : freeCodeCamp",
+                    "source": "freeCodeCamp"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "module_title": "Structuring Data with Lists & Tuples",
+            "duration_hours": 1.5,
+            "content_blocks": [
+              {
+                "block_title": "Construct and Manipulate Lists for Ordered Collections",
+                "length": 45,
+                "type": "exploration",
+                "objectives": [
+                  "Create **Python** lists and add, remove, or modify elements.",
+                  "Perform common list operations such as sorting, slicing, and concatenating.",
+                  "Construct code that dynamically manages collections of data using lists."
+                ],
+                "references": [
+                  {
+                    "title": "Python Lists (Arrays) : W3Schools",
+                    "source": "W3Schools"
+                  },
+                  {
+                    "title": "Working with Python Lists : Datacamp",
+                    "source": "Datacamp"
+                  },
+                  {
+                    "title": "Mastering Python Lists : Real Python",
+                    "source": "Real Python"
+                  }
+                ]
+              },
+              {
+                "block_title": "Access and Iterate List Elements Effectively",
+                "length": 30,
+                "type": "exploration",
+                "objectives": [
+                  "Access individual elements and sub-lists using indexing and slicing.",
+                  "Iterate through list elements using `for` loops to perform actions on each item.",
+                  "Analyze list structures to extract specific data based on requirements."
+                ],
+                "references": [
+                  {
+                    "title": "Python List Indexing and Slicing : Programiz",
+                    "source": "Programiz"
+                  },
+                  {
+                    "title": "Looping Through Lists in Python : Python Crash Course",
+                    "source": "Python Crash Course"
+                  },
+                  {
+                    "title": "Iterating Over Lists : Tutorialspoint",
+                    "source": "Tutorialspoint"
+                  }
+                ]
+              },
+              {
+                "block_title": "Distinguish Lists from Tuples and Apply Them Appropriately",
+                "length": 15,
+                "type": "theory",
+                "objectives": [
+                  "Define the characteristics of **Python** tuples.",
+                  "Explain the key differences between lists and tuples (mutability).",
+                  "Identify scenarios where tuples are more suitable than lists."
+                ],
+                "references": [
+                  {
+                    "title": "Python Tuples : GeeksforGeeks",
+                    "source": "GeeksforGeeks"
+                  },
+                  {
+                    "title": "Lists vs. Tuples in Python : Real Python",
+                    "source": "Real Python"
+                  },
+                  {
+                    "title": "When to Use Tuples Instead of Lists : Towards Data Science",
+                    "source": "Towards Data Science"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "module_title": "Leveraging Dictionaries for Key-Value Data",
+            "duration_hours": 1.0,
+            "content_blocks": [
+              {
+                "block_title": "Create and Manage Dictionaries for Flexible Data Storage",
+                "length": 45,
+                "type": "exploration",
+                "objectives": [
+                  "Create **Python** dictionaries and populate them with key-value pairs.",
+                  "Add, update, and delete entries in a dictionary.",
+                  "Construct dictionaries to represent real-world entities with varied attributes."
+                ],
+                "references": [
+                  {
+                    "title": "Python Dictionaries : W3Schools",
+                    "source": "W3Schools"
+                  },
+                  {
+                    "title": "Working with Python Dictionaries : Real Python",
+                    "source": "Real Python"
+                  },
+                  {
+                    "title": "Python Dictionary Methods : Programiz",
+                    "source": "Programiz"
+                  }
+                ]
+              },
+              {
+                "block_title": "Traverse Dictionary Data and Extract Information",
+                "length": 15,
+                "type": "exploration",
+                "objectives": [
+                  "Access values in a dictionary using their corresponding keys.",
+                  "Iterate through dictionary keys, values, or key-value pairs.",
+                  "Extract specific data from complex dictionary structures."
+                ],
+                "references": [
+                  {
+                    "title": "Accessing Dictionary Items : W3Schools",
+                    "source": "W3Schools"
+                  },
+                  {
+                    "title": "Looping Through Dictionaries : Python for Everybody",
+                    "source": "Py4E"
+                  },
+                  {
+                    "title": "Python Dictionary Iteration : GeeksforGeeks",
+                    "source": "GeeksforGeeks"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "hours_per_week": 0,
+        "week_milestone": {
+          "milestone_title": "Build a Simple Inventory Management System",
+          "description": "Develop a basic **Python** script that simulates an inventory management system for a small store. This project will integrate your understanding of functions for modularity, lists to store multiple items, and dictionaries to manage item details like name, quantity, and price. This is a practical application directly relevant to many entry-level programming roles and can be a strong portfolio piece.",
+          "objectives": [
+            "Design and implement functions to encapsulate core inventory operations (e.g., add item, view inventory, update quantity).",
+            "Utilize lists and dictionaries to efficiently store and retrieve item information.",
+            "Apply learned concepts to create a functional command-line interface for the inventory system."
+          ],
+          "prerequisites": [
+            "Module:3.1",
+            "Module:3.2",
+            "Module:3.3",
+            "Block:2.2.1",
+            "Block:2.2.2"
+          ],
+          "deliverables": [
+            "A single **Python** script (`inventory_system.py`) that runs from the command line.",
+            "Clear, commented code demonstrating proper use of functions, lists, and dictionaries."
+          ],
+          "upload_required": true,
+          "supported_filetypes": [
+            ".py"
+          ],
+          "references": [
+            {
+              "title": "Building a Basic CLI with Python : Towards Data Science",
+              "source": "Towards Data Science"
+            },
+            {
+              "title": "How to Build a Simple Inventory System in Python : Dev.to",
+              "source": "Dev.to"
+            },
+            {
+              "title": "Structuring Your Python Project : Real Python",
+              "source": "Real Python"
+            },
+            {
+              "title": "Python Best Practices for Clean Code : Medium",
+              "source": "Medium"
+            }
+          ],
+          "length": "90-120 minutes",
+          "type": "exploration"
+        }
+      },
+      {
+        "week_number": 4,
+        "week_topic": "Practical Python for Career Success: Files, Errors & Your Portfolio",
+        "week_modules": [
+          {
+            "module_title": "Manage Data: Reading and Writing Files",
+            "duration_hours": 1.5,
+            "content_blocks": [
+              {
+                "block_title": "Prepare to Access Files: Opening and Closing",
+                "length": 30,
+                "type": "theory",
+                "objectives": [
+                  "Define file I/O operations in Python.",
+                  "Understand the importance of properly closing file resources."
+                ],
+                "references": [
+                  {
+                    "title": "Python File Handling Basics",
+                    "source": "Real Python"
+                  },
+                  {
+                    "title": "Working with Files in Python",
+                    "source": "Programiz"
+                  },
+                  {
+                    "title": "The Basics of File I/O in Python",
+                    "source": "Python documentation"
+                  }
+                ]
+              },
+              {
+                "block_title": "Construct Basic Operations: Read and Write Text Files",
+                "length": 30,
+                "type": "exploration",
+                "objectives": [
+                  "Construct a Python script to write text content to a new file.",
+                  "Implement code to read all lines or specific lines from a text file."
+                ],
+                "references": [
+                  {
+                    "title": "How To Read and Write Files in Python 3",
+                    "source": "DigitalOcean"
+                  },
+                  {
+                    "title": "Python File write() Method",
+                    "source": "W3Schools"
+                  },
+                  {
+                    "title": "Python File read() Method",
+                    "source": "W3Schools"
+                  }
+                ]
+              },
+              {
+                "block_title": "Secure File Handling: Use *with* Statements",
+                "length": 30,
+                "type": "exploration",
+                "objectives": [
+                  "Apply the `with` statement to ensure files are automatically closed.",
+                  "Evaluate the benefits of using context managers for file operations."
+                ],
+                "references": [
+                  {
+                    "title": "Understanding Python's `with` Statement",
+                    "source": "InfoWorld"
+                  },
+                  {
+                    "title": "Python `with` Statement Explained",
+                    "source": "freeCodeCamp"
+                  },
+                  {
+                    "title": "Context Managers in Python",
+                    "source": "GeeksforGeeks"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "module_title": "Build Resilience: Handling Errors and Exceptions",
+            "duration_hours": 1.5,
+            "content_blocks": [
+              {
+                "block_title": "Identify Potential Issues: Common Errors and Exceptions",
+                "length": 30,
+                "type": "theory",
+                "objectives": [
+                  "Identify common types of errors and exceptions in Python programs.",
+                  "Understand the concept of exceptions and their role in program control flow."
+                ],
+                "references": [
+                  {
+                    "title": "Common Python Errors and How to Fix Them",
+                    "source": "DataCamp"
+                  },
+                  {
+                    "title": "Python Errors and Built-in Exceptions",
+                    "source": "Programiz"
+                  },
+                  {
+                    "title": "Python Exceptions Tutorial",
+                    "source": "GeeksforGeeks"
+                  }
+                ]
+              },
+              {
+                "block_title": "Deploy Basic Protection: *try-except* Blocks",
+                "length": 30,
+                "type": "exploration",
+                "objectives": [
+                  "Construct code using basic `try` and `except` blocks to catch errors.",
+                  "Implement simple error handling for scenarios like `ValueError` or `TypeError`."
+                ],
+                "references": [
+                  {
+                    "title": "Python `try-except` Statement",
+                    "source": "Programiz"
+                  },
+                  {
+                    "title": "Error Handling in Python",
+                    "source": "PythonForBeginners"
+                  },
+                  {
+                    "title": "Handling Exceptions in Python",
+                    "source": "TutorialsPoint"
+                  }
+                ]
+              },
+              {
+                "block_title": "Refine Error Responses: Multiple Except Blocks and *finally*",
+                "length": 30,
+                "type": "exploration",
+                "objectives": [
+                  "Design solutions using multiple `except` blocks to handle different exception types.",
+                  "Evaluate when and how to use the `else` and `finally` clauses in exception handling."
+                ],
+                "references": [
+                  {
+                    "title": "Python `try-except-else-finally`",
+                    "source": "W3Schools"
+                  },
+                  {
+                    "title": "Handling Multiple Exceptions in Python",
+                    "source": "Towards Data Science"
+                  },
+                  {
+                    "title": "Custom Exceptions in Python",
+                    "source": "GeeksforGeeks"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "module_title": "Optimize Your Code and Showcase Your Skills",
+            "duration_hours": 1.0,
+            "content_blocks": [
+              {
+                "block_title": "Enhance Readability: Follow Python Style Guidelines",
+                "length": 30,
+                "type": "theory",
+                "objectives": [
+                  "Understand the importance of consistent code style in collaborative development.",
+                  "Apply basic formatting guidelines from **PEP 8** to improve code readability."
+                ],
+                "references": [
+                  {
+                    "title": "Python PEP 8 Style Guide",
+                    "source": "Real Python"
+                  },
+                  {
+                    "title": "Why is PEP 8 important?",
+                    "source": "Full Stack Python"
+                  },
+                  {
+                    "title": "The Hitchhiker's Guide to Python! - Style Guide",
+                    "source": "docs.python-guide.org"
+                  }
+                ]
+              },
+              {
+                "block_title": "Curate Your Portfolio: From Code to Career Asset",
+                "length": 30,
+                "type": "theory",
+                "objectives": [
+                  "Identify key elements of an effective programming portfolio for job applications.",
+                  "Understand strategies for presenting Python projects to highlight technical skills."
+                ],
+                "references": [
+                  {
+                    "title": "Building Your First Developer Portfolio",
+                    "source": "freeCodeCamp"
+                  },
+                  {
+                    "title": "What to Include in a Junior Dev Portfolio",
+                    "source": "The Muse"
+                  },
+                  {
+                    "title": "How to Build a Portfolio Website as a Developer",
+                    "source": "Forbes"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "hours_per_week": 0,
+        "week_milestone": {
+          "milestone_title": "Build a Personal Text Analyzer Utility",
+          "description": "Develop a small **Python** script that reads a text file, performs basic analysis (e.g., word count, character count, line count), and writes a summary report to another file. The utility should gracefully handle file not found errors and provide informative messages to the user. This project demonstrates your ability to combine file I/O, error handling, and basic data manipulation, making it an excellent addition to your job application portfolio.",
+          "objectives": [
+            "Apply file I/O operations to read and write data from text files.",
+            "Implement robust error handling for common file-related issues like `FileNotFoundError`.",
+            "Design a simple command-line interface for user interaction.",
+            "Create a clean, well-documented **Python** script suitable for a professional portfolio."
+          ],
+          "prerequisites": [
+            "Module:4.1",
+            "Module:4.2",
+            "Module:3.1"
+          ],
+          "deliverables": [
+            "Python script file (.py)",
+            "Text analysis report file (.txt)",
+            "Brief README.md explaining usage and features"
+          ],
+          "upload_required": true,
+          "supported_filetypes": [
+            ".py",
+            ".txt",
+            ".md"
+          ],
+          "references": [
+            {
+              "title": "How To Create a Command-Line Tool in Python",
+              "source": "Real Python"
+            },
+            {
+              "title": "Building Command-Line Interfaces with Python",
+              "source": "freeCodeCamp"
+            },
+            {
+              "title": "Documenting Python Code (Docstrings)",
+              "source": "GeeksforGeeks"
+            },
+            {
+              "title": "Your Guide to Creating a Great README",
+              "source": "GitHub Docs"
+            }
+          ],
+          "length": "1.5 hours",
+          "type": "exploration"
+        }
+      }
+    ],
+    "course_milestone": {
+      "milestone_title": "Build a Personal Expense Tracker with Python",
+      "description": "This capstone project challenges you to apply all fundamental Python concepts learned throughout the course to develop a practical, console-based Personal Expense Tracker. You'll integrate knowledge of data types, control flow, functions, data structures like lists and dictionaries, file handling, and error management to create a functional application. This project is designed to be a significant portfolio piece, demonstrating your ability to solve real-world problems with Python and enhancing your readiness for entry-level programming roles.",
+      "objectives": [
+        "Design and implement a console-based Personal Expense Tracker application using core Python functionalities.",
+        "Utilize **Python** data structures (e.g., lists, dictionaries) and control flow (conditionals, loops) to manage expense records effectively.",
+        "Implement file input/output operations to persist expense data, ensuring data is saved and loaded across sessions.",
+        "Apply error handling techniques to create a robust application that gracefully manages user input issues and file operations.",
+        "Structure code using functions for modularity and maintainability, adhering to **Python** best practices for a portfolio-ready project."
+      ],
+      "prerequisites": [
+        "Module:1.2",
+        "Module:2.1",
+        "Module:2.2",
+        "Module:3.1",
+        "Module:3.2",
+        "Module:3.3",
+        "Module:4.1",
+        "Module:4.2"
+      ],
+      "deliverables": [
+        "A functional `expense_tracker.py` **Python** script.",
+        "A `README.md` file explaining the application's features, how to run it, and demonstrating the code structure."
+      ],
+      "upload_required": true,
+      "supported_filetypes": [
+        ".py",
+        ".md"
+      ],
+      "references": [
+        {
+          "title": "The Python Standard Library Documentation",
+          "source": "docs.python.org"
+        },
+        {
+          "title": "PEP 8 -- Style Guide for Python Code",
+          "source": "python.org"
+        },
+        {
+          "title": "Automate the Boring Stuff with Python: Practical Programming for Total Beginners",
+          "source": "No Starch Press"
+        }
+      ],
+      "length": "Approximately 6-8 hours",
+      "type": "exploration"
+    }
+  }
+}

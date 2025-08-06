@@ -1,0 +1,40 @@
+{
+    "MilestoneTitle": "Automated Sales Insights Project",
+    "Length": "60-80 hours",
+    "Type": "practical",
+    "Description": "This milestone involves creating an automated data processing and visualization pipeline to analyze sales data. You will leverage Python fundamentals, Pandas for data manipulation, automation techniques, and data visualization libraries to generate actionable insights for a hypothetical business.",
+    "Objectives": [
+        "Apply: Apply Python scripting and Pandas data manipulation techniques to process and clean real-world sales data.",
+        "Analyze: Analyze sales data to identify trends, patterns, and key performance indicators (KPIs).",
+        "Create: Create automated data processing workflows and insightful visualizations to communicate sales findings."
+    ],
+    "Deliverables": [
+        "Python script (sales_analysis.py) containing the automated data processing and visualization pipeline.",
+        "Jupyter Notebook (sales_insights.ipynb) documenting the analysis process, findings, and visualizations.",
+        "Presentation slides (sales_presentation.pptx) summarizing the key sales insights and recommendations."
+    ],
+    "UploadRequired": false,
+    "SupportedFiletypes": [
+        ".py",
+        ".ipynb",
+        ".pptx"
+    ],
+    "References": [
+        {
+            "title": "Data Visualization with Python",
+            "source": "Towards Data Science"
+        },
+        {
+            "title": "Pandas Documentation",
+            "source": "Pandas"
+        },
+        {
+            "title": "Automating Tasks with Python",
+            "source": "Real Python"
+        },
+        {
+            "title": "Building Data Pipelines with Python",
+            "source": "Analytics Vidhya"
+        }
+    ]
+}

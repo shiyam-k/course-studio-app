@@ -1,0 +1,2297 @@
+{
+    "course_outline": {
+        "title": "Mastering Neural Networks: Building Intelligent Systems for Career Advancement",
+        "overview": "Embark on a dynamic learning journey to build and deploy intelligent systems using neural networks, enhancing your career prospects in the rapidly evolving field of AI. This course bridges your existing knowledge with advanced concepts, empowering you to design, train, and evaluate powerful deep learning models for real-world applications.",
+        "prerequisites": [
+            "Proficiency in *Python* programming (data structures, functions)",
+            "Foundational understanding of *linear algebra* (vectors, matrices)",
+            "Basic knowledge of *calculus* (derivatives, gradients)",
+            "Familiarity with data manipulation using libraries like *NumPy*"
+        ],
+        "total_weeks": 4,
+        "learning_outcomes": [
+            "Understand the foundational architecture and operational principles of various neural network types, including MLPs, CNNs, and RNNs.",
+            "Apply core algorithms like *backpropagation* and *gradient descent* to effectively train and optimize neural networks for diverse tasks.",
+            "Evaluate neural network performance using appropriate metrics and systematically debug common issues to ensure robust model deployment.",
+            "Design and implement advanced neural networks using industry-standard deep learning frameworks like *TensorFlow* and *Keras* to solve complex, job-relevant problems."
+        ],
+        "skills": [
+            "*Python* Programming for Machine Learning",
+            "*NumPy* for Numerical Computing",
+            "Neural Network Architecture Design",
+            "Training Neural Networks (*Backpropagation*, *Gradient Descent*)",
+            "Hyperparameter Tuning",
+            "Model Evaluation & Debugging",
+            "Implementing with *TensorFlow* / *Keras*",
+            "Convolutional Neural Networks (*CNNs*)",
+            "Recurrent Neural Networks (*RNNs*) / *LSTMs*",
+            "Transfer Learning Techniques",
+            "Data Preprocessing for Deep Learning",
+            "Model Deployment Fundamentals",
+            "Time Series Prediction with Neural Networks",
+            "Image Classification with Deep Learning",
+            "Natural Language Processing with Neural Networks"
+        ],
+        "weeks": [
+            {
+                "week_number": 1,
+                "week_topic": "Unraveling Neural Network Foundations: From Neurons to Initial Implementations",
+                "week_modules": [
+                    {
+                        "module_title": "Constructing the Perceptron: Core Building Blocks",
+                        "duration_hours": 3.0,
+                        "content_blocks": [
+                            {
+                                "block_title": "Recall Linear Algebra Essentials for Neural Networks",
+                                "length": 30,
+                                "type": "theory",
+                                "objectives": [
+                                    "Review vector and matrix operations crucial for neural network computations.",
+                                    "Understand dot products and matrix multiplication in the context of neuron activations."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "A Gentle Introduction to Linear Algebra for Machine Learning : Machine Learning Mastery",
+                                        "source": "machinelearningmastery.com"
+                                    },
+                                    {
+                                        "title": "Linear Algebra for Deep Learning : DeepLearning.AI Notes",
+                                        "source": "deeplearning.ai"
+                                    },
+                                    {
+                                        "title": "Basic Linear Algebra for Neural Networks : Towards Data Science",
+                                        "source": "towardsdatascience.com"
+                                    }
+                                ],
+                                "completed": true,
+                                "chat": [
+                                    [
+                                        {
+                                            "role": "user",
+                                            "message": "draw out the math of bias in with perceptron",
+                                            "model": "gemini-2.5-flash",
+                                            "response_time": 11.9,
+                                            "start_time": "2025-08-06T17:14:43.646189"
+                                        },
+                                        {
+                                            "role": "AI",
+                                            "message": "Hello! It's great to see you diving into the mathematical core of neural networks. Your question about the math of bias in a perceptron is perfectly aligned with our current module, **Constructing the Perceptron: Core Building Blocks**, and specifically helps us achieve the objectives of **reviewing vector and matrix operations** and **understanding dot products and matrix multiplication in the context of neuron activations**.\n\nLet's break down how bias fits into the perceptron's mathematical model.\n\n## Understanding Bias in the Perceptron\n\nAt its heart, a perceptron is a simple linear classifier. It takes several inputs, multiplies them by associated weights, sums these weighted inputs, and then applies an activation function (often a step function) to produce an output. The bias term is an additional constant value added to this weighted sum before the activation function is applied.\n\n### 1. The Perceptron Without Bias\n\nFirst, let's recall the core computation of a perceptron without a bias term. For a perceptron with `n` inputs `x1, x2, ..., xn` and corresponding weights `w1, w2, ..., wn`, the weighted sum (`z`) is calculated as:\n\n$$z = w_1x_1 + w_2x_2 + \\dots + w_nx_n$$\n\nIn terms of linear algebra, if we represent the inputs as a vector $\\mathbf{x} = [x_1, x_2, \\dots, x_n]^T$ and the weights as a vector $\\mathbf{w} = [w_1, w_2, \\dots, w_n]^T$, then the weighted sum is simply their **dot product**:\n\n$$z = \\mathbf{w} \\cdot \\mathbf{x} \\quad \\text{or} \\quad z = \\mathbf{w}^T \\mathbf{x}$$\n\nThis `z` value is then passed through an *activation function* $\\phi$ (e.g., a step function) to produce the output `y`:\n\n$$y = \\phi(z)$$\n\n### 2. Introducing Bias ($b$)\n\nNow, let's incorporate the bias term, denoted as $b$. The bias is a scalar value that is added *after* the weighted sum of inputs and *before* the activation function.\n\nThe new calculation for `z` becomes:\n\n$$z = w_1x_1 + w_2x_2 + \\dots + w_nx_n + b$$\n\nUsing our linear algebra notation, the equation now looks like this:\n\n$$z = \\mathbf{w}^T \\mathbf{x} + b$$\n\nAnd the final output `y` is:\n\n$$y = \\phi(z) = \\phi(\\mathbf{w}^T \\mathbf{x} + b)$$\n\nHere:\n*   $\\mathbf{w}^T \\mathbf{x}$ represents the *dot product* (or matrix multiplication of a row vector and a column vector) of the weights and inputs.\n*   $b$ is the *bias term*, a scalar constant that shifts the output of the linear combination.\n\n### Role and Importance of Bias\n\nThe bias term essentially allows the perceptron's activation function to be shifted. Without bias, the perceptron's decision boundary (the line or hyperplane that separates classes) *must* pass through the origin (0,0). With the bias term, the perceptron can shift this decision boundary, enabling it to learn patterns that are not linearly separable through the origin.\n\nThink of it like this:\n*   **Weights** determine the *slope* or *orientation* of the decision boundary.\n*   **Bias** determines the *intercept* or *position* of the decision boundary, effectively allowing it to move away from the origin.\n\n## Example Calculation\n\nLet's take a simple perceptron with two inputs ($x_1, x_2$), two weights ($w_1, w_2$), and a bias ($b$).\n\n*   **Inputs**: $\\mathbf{x} = [0.5, 0.8]^T$\n*   **Weights**: $\\mathbf{w} = [0.2, 0.4]^T$\n*   **Bias**: $b = -0.3$\n\n1.  **Calculate the weighted sum ($\\mathbf{w}^T \\mathbf{x}$):**\n    $$w_1x_1 + w_2x_2 = (0.2)(0.5) + (0.4)(0.8)$$\n    $$= 0.1 + 0.32 = 0.42$$\n\n2.  **Add the bias term:**\n    $$z = (\\mathbf{w}^T \\mathbf{x}) + b$$\n    $$z = 0.42 + (-0.3)$$\n    $$z = 0.12$$\n\nNow, if we apply a step activation function where $\\phi(z) = 1$ if $z > 0$ and $0$ otherwise:\n$$y = \\phi(0.12) = 1$$\n\nWithout the bias term, $z$ would be $0.42$, and the output would still be $1$. However, imagine if the weighted sum was $-0.1$ and the bias was $+0.2$. Then $z = -0.1 + 0.2 = 0.1$, leading to an output of $1$. Without bias, $-0.1$ would lead to an output of $0$. This illustrates how bias provides flexibility by shifting the activation threshold.\n\n### Summary Table\n\n| Term         | Symbol       | Type       | Role                                                                    |\n| :----------- | :----------- | :--------- | :---------------------------------------------------------------------- |\n| Input Vector | $\\mathbf{x}$ | Vector     | The features or data points fed into the neuron.                        |\n| Weight Vector| $\\mathbf{w}$ | Vector     | Coefficients that determine the strength of each input's influence.     |\n| Bias         | $b$          | Scalar     | A constant value that shifts the activation threshold of the neuron.    |\n| Weighted Sum | $z$          | Scalar     | The sum of weighted inputs plus bias, pre-activation.                   |\n| Output       | $y$          | Scalar     | The final result after the activation function is applied.              |\n\n## Your Turn!\n\nGiven what we've discussed, why is the bias term particularly useful in solving problems that are not linearly separable *through the origin*? How does it help the perceptron achieve more flexibility?",
+                                            "model": "gemini-2.5-flash",
+                                            "response_time": 11.9,
+                                            "start_time": "2025-08-06T17:14:43.646189"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "role": "user",
+                                            "message": "what is perceptron explain in 2 lines",
+                                            "model": "gemini-2.5-flash",
+                                            "response_time": 3.05,
+                                            "start_time": "2025-08-06T17:17:18.096655"
+                                        },
+                                        {
+                                            "role": "AI",
+                                            "message": "That's a great follow-up question, tying directly into our current module, **Constructing the Perceptron: Core Building Blocks**!\n\nIn two lines, a perceptron can be described as:\n\nA **perceptron** is the simplest form of a neural network, a linear classifier that takes multiple binary or real-valued inputs, computes a weighted sum along with a bias, and then passes this sum through an activation function (typically a step function) to produce a binary output. It essentially learns to make decisions by separating input data into two classes using a straight line or hyperplane.",
+                                            "model": "gemini-2.5-flash",
+                                            "response_time": 3.05,
+                                            "start_time": "2025-08-06T17:17:18.096655"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "role": "user",
+                                            "message": "teach me how a single perceptron acts in NN",
+                                            "model": "gemini-2.5-pro",
+                                            "response_time": 29.36,
+                                            "start_time": "2025-08-06T17:18:38.069550"
+                                        },
+                                        {
+                                            "role": "AI",
+                                            "message": "Excellent question! Let's zoom in and see exactly how a single perceptron\u2014the fundamental neuron of a neural network\u2014operates. This is the core concept in our module, **Constructing the Perceptron: Core Building Blocks**, and will help solidify your understanding of how vector operations produce a decision.\n\nA single perceptron acts as a simple decision-making unit. It follows a clear, five-step process to transform inputs into a single output.\n\n## The 5 Steps of a Perceptron's Operation\n\nThink of a perceptron as a tiny machine that takes in information and makes a \"yes\" or \"no\" decision. Here's how it works:\n\n#### Step 1: Receives Inputs\nThe perceptron starts by receiving one or more input values. These are the features of your data. We can represent them as a vector $\\mathbf{x} = [x_1, x_2, \\dots, x_n]$.\n\n#### Step 2: Assigns Weights\nEach input $x_i$ is paired with a weight $w_i$. A *weight* signifies the importance of that specific input in the final decision. A larger positive weight means the input strongly encourages a \"yes\" (or 1) output, while a large negative weight strongly encourages a \"no\" (or 0) output. These are stored in a weight vector $\\mathbf{w} = [w_1, w_2, \\dots, w_n]$.\n\n#### Step 3: Computes the Weighted Sum (plus Bias)\nThe perceptron multiplies each input by its corresponding weight and sums them all up. This is a **dot product** of the input and weight vectors. It then adds the **bias** ($b$) term.\n\nThis sum, often called the *net input* or `z`, is calculated as:\n\n$$z = (w_1x_1 + w_2x_2 + \\dots + w_nx_n) + b$$\n\nIn vector notation, this is elegantly expressed as:\n\n$$z = \\mathbf{w}^T \\mathbf{x} + b$$\n\n#### Step 4: Applies an Activation Function\nThe calculated sum `z` is then passed through a non-linear *activation function* ($\\phi$). For a classic perceptron, this is a simple **step function**. The step function outputs one value if the input is above a certain threshold (usually 0) and another value if it's not.\n\nFor example, a common step function is:\n$$ \\text{output} = \\phi(z) = \\begin{cases} 1 & \\text{if } z > 0 \\\\ 0 & \\text{if } z \\le 0 \\end{cases} $$\n\n#### Step 5: Produces the Final Output\nThe result from the activation function is the perceptron's final output, `y`. This output represents the perceptron's decision (e.g., 1 for \"yes,\" 0 for \"no\").\n\n### A Simple Analogy: The \"Should I Go for a Run?\" Perceptron\n\nImagine a perceptron that decides whether you should go for a run.\n\n*   **Inputs ($\\mathbf{x}$):**\n    *   `x1`: Is the weather good? (1 for Yes, 0 for No)\n    *   `x2`: Did I sleep well? (1 for Yes, 0 for No)\n*   **Weights ($\\mathbf{w}$):** You care more about good weather than sleep.\n    *   `w1` (for weather): `6`\n    *   `w2` (for sleep): `2`\n*   **Bias ($b$):** You are generally a bit lazy, so you have a negative inclination to run.\n    *   `b`: `-5`\n\nLet's see what it decides if **the weather is bad (`x1 = 0`) but you slept well (`x2 = 1`)**:\n\n1.  **Inputs**: $\\mathbf{x} = [0, 1]^T$\n2.  **Weights**: $\\mathbf{w} = [6, 2]^T$\n3.  **Summation**:\n    $$ z = (w_1x_1 + w_2x_2) + b $$\n    $$ z = (6 \\cdot 0 + 2 \\cdot 1) + (-5) $$\n    $$ z = (0 + 2) - 5 = -3 $$\n4.  **Activation**: We apply the step function to $z = -3$.\n    $$ \\phi(-3) = 0 \\quad (\\text{since } -3 \\le 0) $$\n5.  **Output**: The perceptron's decision is `0`. You do **not** go for a run.\n\nHere is a simple diagram of the process:\n```\nInputs                  Weights\nx1 (0) ---[w1: 6]---> \\\n                        |\n                       SUM (+ Bias: -5) ---> Activation ---> Output (0)\n                        |                      (z = -3)       (Step Func)\nx2 (1) ---[w2: 2]---> /\n```\n\n## Your Turn!\n\nUsing the same \"Should I Go for a Run?\" perceptron:\n\n*   **Weights**: $w_1 = 6$, $w_2 = 2$\n*   **Bias**: $b = -5$\n\nWhat would the perceptron's decision be if **the weather is good (`x1 = 1`) but you slept poorly (`x2 = 0`)**? Walk through the calculation for `z` and determine the final output.",
+                                            "model": "gemini-2.5-pro",
+                                            "response_time": 29.36,
+                                            "start_time": "2025-08-06T17:18:38.069550"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "role": "user",
+                                            "message": "what is activation in perceptron",
+                                            "model": "gemini-2.5-flash",
+                                            "response_time": 7.95,
+                                            "start_time": "2025-08-06T18:49:06.720596"
+                                        },
+                                        {
+                                            "role": "AI",
+                                            "message": "That's an excellent follow-up question, directly building on our previous discussion about how a single perceptron operates! Understanding **activation** is crucial to grasping how the perceptron makes its final decision, directly addressing our objective to **understand dot products and matrix multiplication in the context of neuron activations** within the **Constructing the Perceptron: Core Building Blocks** module.\n\n## What is Activation in a Perceptron?\n\nIn the context of a perceptron, the **activation** refers to the final step where the *weighted sum of inputs plus bias* (the value `z`) is transformed into the perceptron's final output. It's the \"decision-making\" part of the neuron.\n\nThink of it as the neuron \"firing\" or \"not firing.\" If the combined signal (`z`) is strong enough, the neuron \"activates\" and produces a certain output (e.g., 1); otherwise, it doesn't (e.g., 0).\n\n### The Perceptron's Activation Function: The Step Function\n\nFor a classic perceptron, the activation function is typically a **step function** (also known as a *Heaviside step function* or *threshold function*). This function produces a binary output based on whether the input `z` crosses a certain threshold (usually zero).\n\nMathematically, the step function $\\phi(z)$ is defined as:\n\n$$ \\phi(z) = \\begin{cases} 1 & \\text{if } z > \\text{threshold} \\\\ 0 & \\text{if } z \\le \\text{threshold} \\end{cases} $$\n\nOften, the threshold is set to $0$. So, if the weighted sum `z` (plus bias) is greater than 0, the perceptron outputs 1. If `z` is less than or equal to 0, it outputs 0.\n\n$$ \\phi(z) = \\begin{cases} 1 & \\text{if } z > 0 \\\\ 0 & \\text{if } z \\le 0 \\end{cases} $$\n\n### Why is an Activation Function Needed?\n\n1.  **Decision Making (Binary Classification):** The primary role of the step activation function in a perceptron is to enable binary classification. It converts the continuous numerical value of the weighted sum (`z`) into a discrete binary output (0 or 1), representing one of two possible classes or decisions.\n2.  **Thresholding:** It introduces a threshold. Only if the combined \"evidence\" (weighted sum plus bias) is strong enough to cross this threshold does the perceptron \"activate\" and produce a positive output. The bias term, as we discussed, directly influences where this threshold effectively lies, allowing the decision boundary to shift.\n3.  **Non-linearity (in broader NNs):** While the classic perceptron's step function is simple, in more complex neural networks, activation functions are crucial for introducing non-linearity. Without them, stacking multiple layers of perceptrons would just be equivalent to a single linear layer, severely limiting the network's ability to learn complex patterns. For the single perceptron, it provides the \"switch\" from a continuous value to a discrete output.\n\n### Example Walkthrough\n\nLet's revisit our \"Should I Go for a Run?\" perceptron from the previous example:\n\n*   **Inputs**: `x1` (weather), `x2` (sleep)\n*   **Weights**: `w1 = 6`, `w2 = 2`\n*   **Bias**: `b = -5`\n\nYou asked about the scenario where **the weather is good (`x1 = 1`) but you slept poorly (`x2 = 0`)**:\n\n1.  **Calculate the weighted sum plus bias (`z`):**\n    $$ z = (w_1x_1 + w_2x_2) + b $$\n    $$ z = (6 \\cdot 1 + 2 \\cdot 0) + (-5) $$\n    $$ z = (6 + 0) - 5 $$\n    $$ z = 1 $$\n\n2.  **Apply the Activation Function ($\\phi(z)$):**\n    Now, we take this calculated `z = 1` and pass it through our step function:\n    $$ y = \\phi(1) $$\n    Since $1 > 0$, according to our step function definition ($\\phi(z) = 1$ if $z > 0$):\n    $$ y = 1 $$\n\nSo, in this scenario, the perceptron's decision is `1`, meaning you *should* go for a run! The activation function here is what converted the numerical value `1` into the decision `1`.\n\n### Summary\n\nThe activation function is the final step in a perceptron's computation. It acts as a gatekeeper, taking the raw score from the weighted sum plus bias and converting it into a meaningful output, typically a binary decision (0 or 1) for a classic perceptron.\n\n## Your Turn!\n\nConsider a scenario where the weighted sum `z` (including bias) for a perceptron turns out to be `-0.5`. What would the output of the perceptron be, assuming it uses a standard step activation function with a threshold of 0? Why is this the case?",
+                                            "model": "gemini-2.5-flash",
+                                            "response_time": 7.95,
+                                            "start_time": "2025-08-06T18:49:06.720596"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "role": "user",
+                                            "message": "do the scenario yourself in step wise manner, no math or tex code\n",
+                                            "model": "gemini-2.5-flash",
+                                            "response_time": 5.09,
+                                            "start_time": "2025-08-06T18:51:54.409577"
+                                        },
+                                        {
+                                            "role": "AI",
+                                            "message": "Great question! Let's solidify your understanding of the activation function by walking through that scenario step-by-step, just as the perceptron does. This directly relates to how the perceptron makes its final decision, a key part of our **Constructing the Perceptron: Core Building Blocks** module.\n\nYou asked: \"Consider a scenario where the weighted sum `z` (including bias) for a perceptron turns out to be `-0.5`. What would the output of the perceptron be, assuming it uses a standard step activation function with a threshold of 0? Why is this the case?\"\n\nLet's break it down:\n\n### Step-by-Step Scenario Walkthrough: `z = -0.5`\n\n1.  **We have the calculated `z` value:** The perceptron has already taken all its inputs, multiplied them by their weights, and added the bias. The result of that calculation, `z`, is given as `-0.5`. This `z` value is the input to our activation function.\n\n2.  **Recall the Step Activation Function Rule:** For a standard perceptron, the activation function (the \"step function\") works like this:\n    *   If the `z` value is *greater than 0*, the output is 1.\n    *   If the `z` value is *less than or equal to 0*, the output is 0.\n\n3.  **Apply the Rule to our `z`:** We compare our `z` value of `-0.5` to the threshold of 0.\n    *   Is `-0.5` greater than 0? No, it is not.\n    *   Is `-0.5` less than or equal to 0? Yes, it is.\n\n4.  **Determine the Output:** Since `-0.5` is less than or equal to 0, according to the rule, the perceptron's output will be **0**.\n\n### Why is this the case?\n\nThe activation function acts like a switch. The `z` value of `-0.5` did not cross the predefined threshold of 0. Think of it like a light switch that only turns on if you push it hard enough past a certain point. In this case, the combined signal (`z = -0.5`) wasn't strong enough (it was below the threshold) to \"activate\" the perceptron to output a 1. Therefore, it defaulted to 0, representing one of the two possible classifications or decisions.\n\nThis demonstrates how the activation function converts a continuous numerical input (`z`) into a discrete, binary decision (0 or 1), which is the perceptron's final output.",
+                                            "model": "gemini-2.5-flash",
+                                            "response_time": 5.09,
+                                            "start_time": "2025-08-06T18:51:54.409577"
+                                        }
+                                    ]
+                                ]
+                            },
+                            {
+                                "block_title": "Define the Biological Neuron and Artificial Perceptron",
+                                "length": 30,
+                                "type": "theory",
+                                "objectives": [
+                                    "Describe the basic structure and function of a biological neuron.",
+                                    "Explain how the artificial perceptron model mimics biological neurons.",
+                                    "Identify the inputs, weights, bias, and output of a perceptron."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "The Perceptron: A Deep Dive into the First Neuron : Analytics Vidhya",
+                                        "source": "analyticsvidhya.com"
+                                    },
+                                    {
+                                        "title": "Neural Networks and Deep Learning - Chapter 1 : Michael Nielsen",
+                                        "source": "neuralnetworksanddeeplearning.com"
+                                    },
+                                    {
+                                        "title": "Understanding the Perceptron : IBM Developer",
+                                        "source": "developer.ibm.com"
+                                    }
+                                ],
+                                "completed": true,
+                                "chat": [
+                                    [
+                                        {
+                                            "role": "user",
+                                            "message": "Describe the basic structure and function of a biological neuron.\n\nExplain how the artificial perceptron model mimics biological neurons.\n\nIdentify the inputs, weights, bias, and output of a perceptron.",
+                                            "model": "gemini-2.5-flash",
+                                            "response_time": 11.75,
+                                            "start_time": "2025-08-06T18:54:35.127238"
+                                        },
+                                        {
+                                            "role": "AI",
+                                            "message": "Hello! It's great to dive into the foundational concepts of neural networks as part of our \"Mastering Neural Networks\" course, specifically within this week's module \"Constructing the Perceptron: Core Building Blocks.\" You're asking key questions that directly address our objectives: describing biological neurons, explaining their mimicry by the artificial perceptron, and identifying the perceptron's core components.\n\nLet's break down these essential building blocks of intelligent systems.\n\n---\n\n## 1. The Basic Structure and Function of a Biological Neuron\n\nA biological neuron is the fundamental unit of the brain and nervous system, responsible for transmitting information throughout the body. Think of it as a tiny, sophisticated information processor.\n\nHere are its primary components and their functions:\n\n*   **Dendrites**: These are tree-like branches extending from the cell body. Their main function is to *receive signals* (chemical or electrical) from other neurons.\n*   **Cell Body (Soma)**: This is the neuron's main part, containing the nucleus. It *integrates all the incoming signals* received by the dendrites. If the sum of these signals reaches a certain *threshold*, it triggers an electrical impulse.\n*   **Axon**: A long, slender projection that extends from the cell body. Its purpose is to *transmit the electrical impulse* (called an action potential) away from the cell body to other neurons, muscles, or glands.\n*   **Axon Terminals (Synaptic Terminals)**: These are the ends of the axon branches. When the electrical impulse reaches here, they *release neurotransmitters* (chemical messengers) into the synapse (the gap between neurons), which then bind to the dendrites of the next neuron, propagating the signal.\n\n**Function**: Neurons communicate by sending electrochemical signals. When a neuron receives enough stimulation from its dendrites, it \"fires\" an action potential down its axon, releasing neurotransmitters to influence other neurons. This is often referred to as an \"all-or-none\" principle: either the neuron fires completely, or it doesn't fire at all.\n\n## 2. How the Artificial Perceptron Model Mimics Biological Neurons\n\nThe artificial perceptron, one of the earliest and simplest models of a neural network, was explicitly designed to mimic the fundamental signal processing of a biological neuron.\n\nHere's a breakdown of the mimicry:\n\n| Biological Neuron Aspect         | Artificial Perceptron Equivalent         | Function/Mimicry                                                                                                                                                                                                                                                              |\n| :------------------------------- | :--------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| **Dendrites** (receiving signals) | **Inputs (x\u2081 , x\u2082 , ..., x\u2099)**         | The perceptron receives multiple numerical *inputs*, just as a biological neuron receives multiple signals. Each input represents a feature or a piece of information from the previous layer or the initial data.                                                                |\n| **Synaptic Strength** (connection) | **Weights (w\u2081 , w\u2082 , ..., w\u2099)**          | Each input to the perceptron is multiplied by a *weight*. These weights represent the *strength or importance* of the connection, similar to how the strength of a synapse in a biological neuron determines how much influence an incoming signal has on the cell body. |\n| **Cell Body (Soma)** (summation) | **Weighted Summation** (`\u03a3(x\u1d62 * w\u1d62) + b`) | The perceptron *sums* up all the weighted inputs, often adding a *bias*. This process is analogous to the cell body integrating all incoming signals before deciding whether to fire.                                                                                |\n| **Threshold** (firing condition) | **Activation Function**                  | After the weighted sum, an *activation function* is applied. In a simple perceptron, this is often a step function that outputs 1 if the sum exceeds a certain threshold (or 0 otherwise), mimicking the biological neuron's \"all-or-none\" firing principle.             |\n| **Axon** (transmitting signal)   | **Output**                               | The final result of the activation function is the perceptron's *output*, which is then passed on to other perceptrons in subsequent layers, just as a biological neuron's signal is transmitted down its axon.                                                         |\n\nThe key idea is that the perceptron processes inputs, weighs their importance, sums them up, and then makes a binary decision (often 0 or 1) based on whether this sum crosses a threshold, much like a biological neuron decides whether to \"fire.\"\n\n## 3. Identifying the Inputs, Weights, Bias, and Output of a Perceptron\n\nLet's clearly define these components of a single perceptron:\n\n1.  **Inputs (x\u2081, x\u2082, ..., x\u2099)**: These are the numerical values that are fed into the perceptron. They can represent features from a dataset (e.g., pixel values in an image, measurements of a flower) or outputs from previous neurons in a network.\n2.  **Weights (w\u2081, w\u2082, ..., w\u2099)**: Each input `x\u1d62` is associated with a corresponding weight `w\u1d62`. Weights are numerical values that determine the *strength or importance* of each input. A larger positive weight means that input has a stronger excitatory effect on the perceptron, while a large negative weight means it has a stronger inhibitory effect. Weights are typically learned during the training process.\n3.  **Bias (b)**: The bias is an additional constant value that is added to the weighted sum of inputs. It allows the perceptron to shift its activation function independently of the inputs. Think of it as giving the neuron a baseline activation level, making it easier or harder to activate regardless of the inputs.\n    *   **Calculation**: The initial step inside a perceptron is to calculate the weighted sum: `Z = (x\u2081 * w\u2081) + (x\u2082 * w\u2082) + ... + (x\u2099 * w\u2099) + b`.\n4.  **Output (y)**: This is the final value produced by the perceptron. It is calculated by applying an *activation function* to the weighted sum `Z`. For a simple perceptron, the output is often binary (e.g., 0 or 1), indicating a classification decision. For instance, using a step activation function, if `Z` is greater than a threshold, the output is 1; otherwise, it's 0.\n\nIn essence, a perceptron takes multiple inputs, multiplies each by a weight, sums these products, adds a bias, and then passes this total through an activation function to produce a single output.\n\n---\n\nTo ensure you've grasped these fundamental concepts, consider these questions:\n\n1.  If a biological neuron's dendrites are damaged, how might this impact its ability to transmit information, and what would be the equivalent problem in an artificial perceptron?\n2.  Can you think of a simple real-world scenario (e.g., deciding whether to carry an umbrella) where the \"inputs,\" \"weights,\" \"bias,\" and \"output\" of a perceptron could represent different factors and a decision?",
+                                            "model": "gemini-2.5-flash",
+                                            "response_time": 11.75,
+                                            "start_time": "2025-08-06T18:54:35.127238"
+                                        }
+                                    ]
+                                ]
+                            },
+                            {
+                                "block_title": "Construct the Perceptron Algorithm from Scratch",
+                                "length": 45,
+                                "type": "exploration",
+                                "objectives": [
+                                    "Implement a single perceptron using *NumPy* to perform basic classification.",
+                                    "Trace the step-by-step execution of the perceptron learning rule.",
+                                    "Identify the conditions under which a perceptron can classify data."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Implementing the Perceptron Algorithm from Scratch in Python : Machine Learning Mastery",
+                                        "source": "machinelearningmastery.com"
+                                    },
+                                    {
+                                        "title": "Perceptron Learning Rule Explained : GeeksforGeeks",
+                                        "source": "geeksforgeeks.org"
+                                    },
+                                    {
+                                        "title": "Perceptron Implementation Example : Python for Machine Learning",
+                                        "source": "python-for-machine-learning.com"
+                                    }
+                                ],
+                                "completed": true
+                            },
+                            {
+                                "block_title": "Evaluate Common Activation Functions: Sigmoid, ReLU, Tanh",
+                                "length": 30,
+                                "type": "theory",
+                                "objectives": [
+                                    "Understand the purpose and role of activation functions in neural networks.",
+                                    "Compare and contrast the mathematical properties of Sigmoid, ReLU, and Tanh.",
+                                    "Discuss the advantages and disadvantages of each activation function in different scenarios."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Activation Functions in Neural Networks : Towards Data Science",
+                                        "source": "towardsdatascience.com"
+                                    },
+                                    {
+                                        "title": "A Comprehensive Guide to Activation Functions : Analytics Vidhya",
+                                        "source": "analyticsvidhya.com"
+                                    },
+                                    {
+                                        "title": "ReLU (Rectified Linear Unit) : Wikipedia",
+                                        "source": "wikipedia.org"
+                                    }
+                                ],
+                                "completed": true
+                            },
+                            {
+                                "block_title": "Implement Activation Functions in *NumPy*",
+                                "length": 45,
+                                "type": "exploration",
+                                "objectives": [
+                                    "Write *Python* functions for Sigmoid, ReLU, and Tanh using *NumPy*.",
+                                    "Apply these functions to sample data and observe their outputs.",
+                                    "Integrate activation functions into a basic perceptron model."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Coding Neural Network - Activation Functions : Python Engineer",
+                                        "source": "python-engineer.com"
+                                    },
+                                    {
+                                        "title": "Building Neural Network from Scratch in Python : Data Camp",
+                                        "source": "datacamp.com"
+                                    },
+                                    {
+                                        "title": "Understanding Activation Functions with Python Code : Data Science with Python",
+                                        "source": "datasciencewithpython.com"
+                                    }
+                                ],
+                                "completed": true
+                            }
+                        ]
+                    },
+                    {
+                        "module_title": "Mastering Optimization: Backpropagation & Gradient Descent",
+                        "duration_hours": 4.0,
+                        "content_blocks": [
+                            {
+                                "block_title": "Grasp the Concept of Loss Functions for Model Training",
+                                "length": 30,
+                                "type": "theory",
+                                "objectives": [
+                                    "Explain the role of loss functions in quantifying model error.",
+                                    "Differentiate between common loss functions like Mean Squared Error (MSE) and Cross-Entropy.",
+                                    "Understand how loss functions guide the learning process."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Understanding Loss Functions in Machine Learning : IBM Developer",
+                                        "source": "developer.ibm.com"
+                                    },
+                                    {
+                                        "title": "Loss Functions for Neural Networks : Machine Learning Mastery",
+                                        "source": "machinelearningmastery.com"
+                                    },
+                                    {
+                                        "title": "A Guide to Loss Functions in Neural Networks : Towards Data Science",
+                                        "source": "towardsdatascience.com"
+                                    }
+                                ],
+                                "completed": false
+                            },
+                            {
+                                "block_title": "Analyze Gradient Descent for Optimization",
+                                "length": 45,
+                                "type": "theory",
+                                "objectives": [
+                                    "Describe the intuition behind gradient descent as an optimization algorithm.",
+                                    "Explain how gradients indicate the direction of steepest ascent/descent.",
+                                    "Understand the impact of learning rate on convergence in gradient descent."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "An Introduction to Gradient Descent : Towards Data Science",
+                                        "source": "towardsdatascience.com"
+                                    },
+                                    {
+                                        "title": "Gradient Descent Algorithm Explained : GeeksforGeeks",
+                                        "source": "geeksforgeeks.org"
+                                    },
+                                    {
+                                        "title": "Gradient Descent in Machine Learning : Analytics Vidhya",
+                                        "source": "analyticsvidhya.com"
+                                    }
+                                ],
+                                "completed": false
+                            },
+                            {
+                                "block_title": "Simulate Gradient Descent Step-by-Step",
+                                "length": 30,
+                                "type": "exploration",
+                                "objectives": [
+                                    "Visually understand the movement of gradient descent on a simple cost function.",
+                                    "Manually calculate and apply gradient updates for a minimal example.",
+                                    "Observe the effect of different learning rates on convergence through simulation."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Gradient Descent from Scratch : The School of AI",
+                                        "source": "theschool.ai"
+                                    },
+                                    {
+                                        "title": "A Visual Explanation of Gradient Descent : Distill.pub",
+                                        "source": "distill.pub"
+                                    },
+                                    {
+                                        "title": "Implementing Gradient Descent in Python : Towards Data Science",
+                                        "source": "towardsdatascience.com"
+                                    }
+                                ],
+                                "completed": false
+                            },
+                            {
+                                "block_title": "Uncover the Principles of Backpropagation Algorithm",
+                                "length": 45,
+                                "type": "theory",
+                                "objectives": [
+                                    "Explain why backpropagation is essential for training multi-layer neural networks.",
+                                    "Describe the concept of the 'chain rule' in the context of backpropagation.",
+                                    "Understand the flow of error signals backward through the network."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Backpropagation Algorithm - A Complete Guide : Medium",
+                                        "source": "medium.com"
+                                    },
+                                    {
+                                        "title": "Neural Networks and Deep Learning - Chapter 2 : Michael Nielsen",
+                                        "source": "neuralnetworksanddeeplearning.com"
+                                    },
+                                    {
+                                        "title": "The Backpropagation Algorithm : Stanford University CS231n Notes",
+                                        "source": "cs231n.stanford.edu"
+                                    }
+                                ],
+                                "completed": false
+                            },
+                            {
+                                "block_title": "Deconstruct Backpropagation for a Simple Network",
+                                "length": 45,
+                                "type": "theory",
+                                "objectives": [
+                                    "Walk through the mathematical steps of backpropagation for a two-layer network.",
+                                    "Calculate gradients for weights and biases at each layer.",
+                                    "Connect the output of backpropagation to the weight update rule."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Backpropagation for a Neural Network : Towards Data Science",
+                                        "source": "towardsdatascience.com"
+                                    },
+                                    {
+                                        "title": "Deriving Backpropagation for a Simple Neural Network : Analytics Vidhya",
+                                        "source": "analyticsvidhya.com"
+                                    },
+                                    {
+                                        "title": "Backpropagation Step-by-Step : 3blue1brown",
+                                        "source": "3blue1brown.com"
+                                    }
+                                ],
+                                "completed": false
+                            },
+                            {
+                                "block_title": "Formulate the Backpropagation Equations in *NumPy*",
+                                "length": 45,
+                                "type": "exploration",
+                                "objectives": [
+                                    "Translate the mathematical formulas of backpropagation into *NumPy* code.",
+                                    "Implement forward and backward passes for a simple feedforward network.",
+                                    "Verify the gradient computations using numerical differentiation (optional but encouraged)."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Neural Network from Scratch in Python and NumPy : Data Science Dojo",
+                                        "source": "datasciencedojo.com"
+                                    },
+                                    {
+                                        "title": "Building a Neural Network from Scratch in Python Part 2 : Towards Data Science",
+                                        "source": "towardsdatascience.com"
+                                    },
+                                    {
+                                        "title": "Backpropagation in *NumPy* Tutorial : Python Code",
+                                        "source": "python-code.com"
+                                    }
+                                ],
+                                "completed": false
+                            }
+                        ]
+                    },
+                    {
+                        "module_title": "Building Simple Neural Networks: Hands-On Implementation",
+                        "duration_hours": 3.5,
+                        "content_blocks": [
+                            {
+                                "block_title": "Prepare Data for Neural Network Training",
+                                "length": 30,
+                                "type": "exploration",
+                                "objectives": [
+                                    "Apply techniques for data normalization and standardization.",
+                                    "Handle categorical data using one-hot encoding for network input.",
+                                    "Split datasets into training, validation, and testing sets."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Data Preprocessing for Deep Learning : Analytics Vidhya",
+                                        "source": "analyticsvidhya.com"
+                                    },
+                                    {
+                                        "title": "Feature Scaling for Machine Learning : Towards Data Science",
+                                        "source": "towardsdatascience.com"
+                                    },
+                                    {
+                                        "title": "Train, Validation, and Test Sets : Google Developers",
+                                        "source": "developers.google.com"
+                                    }
+                                ],
+                                "completed": false
+                            },
+                            {
+                                "block_title": "Architect a Single-Layer Neural Network (MLP)",
+                                "length": 45,
+                                "type": "theory",
+                                "objectives": [
+                                    "Design the architecture of a basic Multi-Layer Perceptron (MLP).",
+                                    "Determine the number of input, hidden, and output units based on a problem statement.",
+                                    "Understand the role of biases and weights in network architecture."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Understanding Multi-Layer Perceptron : GeeksforGeeks",
+                                        "source": "geeksforgeeks.org"
+                                    },
+                                    {
+                                        "title": "Neural Network Architectures : Towards Data Science",
+                                        "source": "towardsdatascience.com"
+                                    },
+                                    {
+                                        "title": "Designing a Neural Network: How to Choose Number of Layers and Neurons : KDnuggets",
+                                        "source": "kdnuggets.com"
+                                    }
+                                ],
+                                "completed": false
+                            },
+                            {
+                                "block_title": "Train a Neural Network for Binary Classification",
+                                "length": 45,
+                                "type": "exploration",
+                                "objectives": [
+                                    "Integrate forward pass, loss calculation, and backpropagation into a complete training loop.",
+                                    "Implement batch gradient descent for updating network weights and biases.",
+                                    "Observe the loss reduction over training epochs for a classification task."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "How to Train a Neural Network : Machine Learning Mastery",
+                                        "source": "machinelearningmastery.com"
+                                    },
+                                    {
+                                        "title": "Training Neural Networks: Understanding the Basics : Towards Data Science",
+                                        "source": "towardsdatascience.com"
+                                    },
+                                    {
+                                        "title": "Building your first Neural Network with Python : IBM Developer",
+                                        "source": "developer.ibm.com"
+                                    }
+                                ],
+                                "completed": false
+                            },
+                            {
+                                "block_title": "Debug Common Training Issues in Neural Networks",
+                                "length": 45,
+                                "type": "exploration",
+                                "objectives": [
+                                    "Identify common issues like vanishing/exploding gradients and dead neurons.",
+                                    "Apply basic debugging strategies for neural network training loops.",
+                                    "Recognize when a model is failing to learn or converging slowly."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Debugging Neural Networks : Towards Data Science",
+                                        "source": "towardsdatascience.com"
+                                    },
+                                    {
+                                        "title": "Common Pitfalls in Neural Network Training : Medium",
+                                        "source": "medium.com"
+                                    },
+                                    {
+                                        "title": "How to Debug Neural Networks : DeepLearning.AI",
+                                        "source": "deeplearning.ai"
+                                    }
+                                ],
+                                "completed": false
+                            },
+                            {
+                                "block_title": "Evaluate Performance Metrics for Classification Models",
+                                "length": 45,
+                                "type": "theory",
+                                "objectives": [
+                                    "Define accuracy, precision, recall, and F1-score for classification problems.",
+                                    "Interpret a confusion matrix to understand model performance.",
+                                    "Choose appropriate metrics based on the specific business or job objective."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Understanding Classification Performance Metrics : Towards Data Science",
+                                        "source": "towardsdatascience.com"
+                                    },
+                                    {
+                                        "title": "A Guide to Machine Learning Metrics : Google Developers",
+                                        "source": "developers.google.com"
+                                    },
+                                    {
+                                        "title": "Metrics to Evaluate your Machine Learning Algorithm : Analytics Vidhya",
+                                        "source": "analyticsvidhya.com"
+                                    }
+                                ],
+                                "completed": false
+                            }
+                        ]
+                    },
+                    {
+                        "module_title": "Refining Initial Implementations: Advanced Concepts",
+                        "duration_hours": 1.5,
+                        "content_blocks": [
+                            {
+                                "block_title": "Identify Overfitting and Underfitting in Models",
+                                "length": 30,
+                                "type": "theory",
+                                "objectives": [
+                                    "Distinguish between overfitting and underfitting in trained neural networks.",
+                                    "Explain the causes of overfitting (e.g., complex model, small dataset) and underfitting (e.g., simple model, insufficient training).",
+                                    "Recognize the signs of overfitting and underfitting from training/validation curves."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Understanding Overfitting and Underfitting : IBM Developer",
+                                        "source": "developer.ibm.com"
+                                    },
+                                    {
+                                        "title": "Overfitting vs. Underfitting : Towards Data Science",
+                                        "source": "towardsdatascience.com"
+                                    },
+                                    {
+                                        "title": "Detecting Overfitting with Learning Curves : Machine Learning Mastery",
+                                        "source": "machinelearningmastery.com"
+                                    }
+                                ],
+                                "completed": false
+                            },
+                            {
+                                "block_title": "Strategize Hyperparameter Tuning for Neural Networks",
+                                "length": 30,
+                                "type": "theory",
+                                "objectives": [
+                                    "Define common hyperparameters in neural networks (e.g., learning rate, number of hidden layers/neurons, batch size).",
+                                    "Discuss basic strategies for hyperparameter tuning (e.g., grid search, random search).",
+                                    "Understand the impact of different hyperparameter choices on model performance."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "A Practical Guide to Hyperparameters Tuning : Machine Learning Mastery",
+                                        "source": "machinelearningmastery.com"
+                                    },
+                                    {
+                                        "title": "Hyperparameter Tuning for Deep Learning : Towards Data Science",
+                                        "source": "towardsdatascience.com"
+                                    },
+                                    {
+                                        "title": "The Fundamentals of Hyperparameter Tuning : Papers with Code",
+                                        "source": "paperswithcode.com"
+                                    }
+                                ],
+                                "completed": false
+                            },
+                            {
+                                "block_title": "Apply Basic Regularization Techniques",
+                                "length": 30,
+                                "type": "exploration",
+                                "objectives": [
+                                    "Implement L1 and L2 regularization to prevent overfitting.",
+                                    "Describe the concept of dropout as a regularization technique.",
+                                    "Apply a basic dropout layer to a simple neural network and observe its effect."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Regularization in Neural Networks : GeeksforGeeks",
+                                        "source": "geeksforgeeks.org"
+                                    },
+                                    {
+                                        "title": "A Comprehensive Guide to Regularization : Towards Data Science",
+                                        "source": "towardsdatascience.com"
+                                    },
+                                    {
+                                        "title": "Understanding Dropout for Deep Learning : Machine Learning Mastery",
+                                        "source": "machinelearningmastery.com"
+                                    }
+                                ],
+                                "completed": false
+                            }
+                        ]
+                    }
+                ],
+                "hours_per_week": 0,
+                "week_milestone": {
+                    "milestone_title": "Build a Simple Neural Network Classifier from Scratch",
+                    "description": "Apply concepts from Modules 1, 2, and 3 to build a complete feedforward neural network in *Python* and *NumPy* to classify a synthetic dataset. This project will reinforce your understanding of forward propagation, backpropagation, and training loops, crucial for career advancement in AI.",
+                    "objectives": [
+                        "Implement a neural network from scratch using *NumPy* for binary classification.",
+                        "Train the network using gradient descent and backpropagation on a synthetic dataset.",
+                        "Evaluate the model's performance using appropriate classification metrics.",
+                        "Debug and optimize the network to achieve satisfactory accuracy on unseen data."
+                    ],
+                    "prerequisites": [
+                        "Block:1.1.3",
+                        "Block:1.2.6",
+                        "Block:1.3.3",
+                        "Block:1.3.4",
+                        "Block:1.3.5"
+                    ],
+                    "deliverables": [
+                        "A *Python* script (`.py`) containing the neural network implementation.",
+                        "A brief report (`.pdf`) summarizing your design choices, training process, and final performance metrics."
+                    ],
+                    "upload_required": true,
+                    "supported_filetypes": [
+                        ".py",
+                        ".pdf"
+                    ],
+                    "references": [
+                        {
+                            "title": "Neural Networks and Deep Learning : Michael Nielsen",
+                            "source": "neuralnetworksanddeeplearning.com"
+                        },
+                        {
+                            "title": "Implementing a Neural Network from Scratch : Towards Data Science",
+                            "source": "towardsdatascience.com"
+                        },
+                        {
+                            "title": "The Backpropagation Algorithm : Stanford University CS231n Notes",
+                            "source": "cs231n.stanford.edu"
+                        },
+                        {
+                            "title": "Practical Guide to Hyperparameters Tuning : Machine Learning Mastery",
+                            "source": "machinelearningmastery.com"
+                        }
+                    ],
+                    "length": "3 hours",
+                    "type": "exploration"
+                }
+            },
+            {
+                "week_number": 2,
+                "week_topic": "Crafting Networks with Frameworks: TensorFlow & Keras Projects",
+                "week_modules": [
+                    {
+                        "module_title": "Bridging to Frameworks: Pythonic Deep Learning with TensorFlow",
+                        "duration_hours": 3.0,
+                        "content_blocks": [
+                            {
+                                "block_title": "Set Up Your Deep Learning Environment: TensorFlow Installation",
+                                "length": 30,
+                                "type": "exploration",
+                                "objectives": [
+                                    "Install and configure *TensorFlow* within a *Python* virtual environment.",
+                                    "Verify the successful installation of *TensorFlow* with GPU support (if applicable)."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "TensorFlow Installation Guide : TensorFlow.org",
+                                        "source": "TensorFlow"
+                                    },
+                                    {
+                                        "title": "Setting Up Your Python Environment for Machine Learning : Towards Data Science",
+                                        "source": "Towards Data Science"
+                                    },
+                                    {
+                                        "title": "GPU Support for TensorFlow : NVIDIA Developer",
+                                        "source": "NVIDIA"
+                                    }
+                                ],
+                                "completed": false
+                            },
+                            {
+                                "block_title": "Review TensorFlow Fundamentals: Tensors & Operations",
+                                "length": 45,
+                                "type": "theory",
+                                "objectives": [
+                                    "Define *TensorFlow* Tensors and explain their key properties (rank, shape, dtype).",
+                                    "Perform basic arithmetic and reshaping operations on Tensors using *TensorFlow* functions.",
+                                    "Compare *TensorFlow* Tensors with *NumPy* arrays and explain their interoperability."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "TensorFlow Core APIs : TensorFlow.org",
+                                        "source": "TensorFlow"
+                                    },
+                                    {
+                                        "title": "Introduction to Tensors for Deep Learning : IBM",
+                                        "source": "IBM"
+                                    },
+                                    {
+                                        "title": "NumPy to TensorFlow Conversion Best Practices : GeeksforGeeks",
+                                        "source": "GeeksforGeeks"
+                                    }
+                                ],
+                                "completed": false
+                            },
+                            {
+                                "block_title": "Prepare Data for Networks: tf.data API Basics",
+                                "length": 45,
+                                "type": "exploration",
+                                "objectives": [
+                                    "Construct efficient data pipelines using the *tf.data* API.",
+                                    "Apply common data preprocessing transformations (e.g., batching, shuffling, mapping) to datasets.",
+                                    "Demonstrate how to load and prepare tabular or image data for neural network input using *tf.data*."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "tf.data: Build TensorFlow input pipelines : TensorFlow.org",
+                                        "source": "TensorFlow"
+                                    },
+                                    {
+                                        "title": "Optimizing TensorFlow Data Pipelines : Medium",
+                                        "source": "Medium"
+                                    },
+                                    {
+                                        "title": "Preprocessing Data for Deep Learning : Analytics Vidhya",
+                                        "source": "Analytics Vidhya"
+                                    },
+                                    {
+                                        "title": "Loading Image Data with tf.data : Keras.io",
+                                        "source": "Keras"
+                                    }
+                                ],
+                                "completed": false
+                            },
+                            {
+                                "block_title": "Implement Basic Neural Network Layers",
+                                "length": 30,
+                                "type": "theory",
+                                "objectives": [
+                                    "Identify the role of fundamental neural network layers like `Dense` and `Activation`.",
+                                    "Construct simple feedforward neural network architectures using *TensorFlow*'s low-level API.",
+                                    "Explain the purpose of activation functions (e.g., ReLU, Sigmoid) in non-linearity."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Understanding Neural Network Layers : Towards Data Science",
+                                        "source": "Towards Data Science"
+                                    },
+                                    {
+                                        "title": "Activation Functions in Neural Networks : Simplilearn",
+                                        "source": "Simplilearn"
+                                    },
+                                    {
+                                        "title": "Building Your First Neural Network with TensorFlow : DataCamp",
+                                        "source": "DataCamp"
+                                    }
+                                ],
+                                "completed": false
+                            },
+                            {
+                                "block_title": "Configure Optimizers & Loss Functions",
+                                "length": 30,
+                                "type": "exploration",
+                                "objectives": [
+                                    "Select appropriate loss functions for common machine learning tasks (e.g., `BinaryCrossentropy`, `MeanSquaredError`).",
+                                    "Initialize and configure *TensorFlow* optimizers (e.g., `Adam`, `SGD`).",
+                                    "Demonstrate how to combine loss functions and optimizers with a basic neural network model."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Loss Functions in Neural Networks : Keras.io",
+                                        "source": "Keras"
+                                    },
+                                    {
+                                        "title": "Optimizers for Training Neural Networks : Analytics Vidhya",
+                                        "source": "Analytics Vidhya"
+                                    },
+                                    {
+                                        "title": "A Gentle Introduction to Optimizers : Machine Learning Mastery",
+                                        "source": "Machine Learning Mastery"
+                                    }
+                                ],
+                                "completed": false
+                            }
+                        ]
+                    },
+                    {
+                        "module_title": "Building Sequential Models with Keras",
+                        "duration_hours": 3.0,
+                        "content_blocks": [
+                            {
+                                "block_title": "Construct Your First Neural Network with Keras",
+                                "length": 45,
+                                "type": "exploration",
+                                "objectives": [
+                                    "Initialize a *Keras* `Sequential` model for building simple neural networks.",
+                                    "Add various layers (e.g., `Dense`, `Flatten`, `Input`) to a `Sequential` model.",
+                                    "Compile the model by specifying an optimizer, loss function, and metrics."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Getting Started with the Keras Sequential Model : Keras.io",
+                                        "source": "Keras"
+                                    },
+                                    {
+                                        "title": "Your First Keras Model : Machine Learning Mastery",
+                                        "source": "Machine Learning Mastery"
+                                    },
+                                    {
+                                        "title": "Build and Compile Keras Models : TensorFlow.org",
+                                        "source": "TensorFlow"
+                                    }
+                                ],
+                                "completed": false
+                            },
+                            {
+                                "block_title": "Add Common Layers: Dense, Activation, Flatten",
+                                "length": 30,
+                                "type": "theory",
+                                "objectives": [
+                                    "Explain the purpose and usage of `Dense` (fully connected) layers in neural networks.",
+                                    "Differentiate between various activation functions and their applications (e.g., `relu`, `softmax`, `sigmoid`).",
+                                    "Understand when and why to use the `Flatten` layer in convolutional networks or for input preprocessing."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Keras Core Layers : Keras.io",
+                                        "source": "Keras"
+                                    },
+                                    {
+                                        "title": "Demystifying Activation Functions in Neural Networks : Analytics Vidhya",
+                                        "source": "Analytics Vidhya"
+                                    },
+                                    {
+                                        "title": "Understanding the Flatten Layer in Keras : Stack Overflow",
+                                        "source": "Stack Overflow Community"
+                                    }
+                                ],
+                                "completed": false
+                            },
+                            {
+                                "block_title": "Define Input and Output Shapes for Models",
+                                "length": 30,
+                                "type": "theory",
+                                "objectives": [
+                                    "Determine the correct `input_shape` for the first layer of a *Keras* model based on dataset dimensions.",
+                                    "Identify the appropriate output layer configuration (e.g., number of units, activation function) for classification and regression tasks.",
+                                    "Understand how data flows through layers and how shapes transform at each step."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Input Shapes in Keras : Keras.io",
+                                        "source": "Keras"
+                                    },
+                                    {
+                                        "title": "Common Output Layer Configurations : Machine Learning Mastery",
+                                        "source": "Machine Learning Mastery"
+                                    },
+                                    {
+                                        "title": "Demystifying Input and Output Shapes in Deep Learning : Towards Data Science",
+                                        "source": "Towards Data Science"
+                                    }
+                                ],
+                                "completed": false
+                            },
+                            {
+                                "block_title": "Compile & Fit Sequential Models",
+                                "length": 45,
+                                "type": "exploration",
+                                "objectives": [
+                                    "Configure the `compile()` method with an optimizer, loss function, and metrics.",
+                                    "Train a *Keras* model using the `fit()` method with appropriate batch size and epochs.",
+                                    "Monitor training progress by interpreting the output of the `fit()` method (loss, accuracy)."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Training Your First Keras Model : Keras.io",
+                                        "source": "Keras"
+                                    },
+                                    {
+                                        "title": "Deep Learning with Python : Manning Publications",
+                                        "source": "Manning"
+                                    },
+                                    {
+                                        "title": "Keras Model Compile and Fit : TensorFlow.org",
+                                        "source": "TensorFlow"
+                                    },
+                                    {
+                                        "title": "Interpreting Model Training Output : PyImageSearch",
+                                        "source": "PyImageSearch"
+                                    }
+                                ],
+                                "completed": false
+                            },
+                            {
+                                "block_title": "Troubleshoot Common Keras Model Errors",
+                                "length": 30,
+                                "type": "exploration",
+                                "objectives": [
+                                    "Identify common errors encountered during *Keras* model definition and training (e.g., shape mismatches, NaN loss).",
+                                    "Apply debugging techniques to diagnose and resolve errors in *Keras* code.",
+                                    "Utilize online resources and documentation effectively for troubleshooting."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Debugging Keras Models : Keras.io",
+                                        "source": "Keras"
+                                    },
+                                    {
+                                        "title": "Common Errors in Deep Learning : Towards Data Science",
+                                        "source": "Towards Data Science"
+                                    },
+                                    {
+                                        "title": "TensorFlow and Keras Debugging Tips : Google Cloud",
+                                        "source": "Google Cloud"
+                                    }
+                                ],
+                                "completed": false
+                            }
+                        ]
+                    },
+                    {
+                        "module_title": "Training & Evaluating Models: Beyond the Basics",
+                        "duration_hours": 3.0,
+                        "content_blocks": [
+                            {
+                                "block_title": "Monitor Model Performance: Metrics and Callbacks",
+                                "length": 45,
+                                "type": "theory",
+                                "objectives": [
+                                    "Select relevant performance metrics (e.g., precision, recall, F1-score for classification; MAE, MSE for regression).",
+                                    "Implement *Keras* Callbacks (e.g., `ModelCheckpoint`, `EarlyStopping`, `TensorBoard`) to monitor and control training.",
+                                    "Analyze callback outputs to make informed decisions about model training."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Understanding Metrics in Keras : Keras.io",
+                                        "source": "Keras"
+                                    },
+                                    {
+                                        "title": "Using Keras Callbacks : Keras.io",
+                                        "source": "Keras"
+                                    },
+                                    {
+                                        "title": "Deep Learning Model Performance Metrics : Towards Data Science",
+                                        "source": "Towards Data Science"
+                                    },
+                                    {
+                                        "title": "A Guide to Keras Callbacks : Machine Learning Mastery",
+                                        "source": "Machine Learning Mastery"
+                                    }
+                                ],
+                                "completed": false
+                            },
+                            {
+                                "block_title": "Validate Model Generalization: Train-Validation Split",
+                                "length": 30,
+                                "type": "exploration",
+                                "objectives": [
+                                    "Implement proper data splitting techniques (train-validation-test) for robust model evaluation.",
+                                    "Explain the importance of validation sets in preventing overfitting and estimating generalization error.",
+                                    "Train a model using a validation split and observe its performance on unseen data."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Understanding Train, Validation, and Test Sets : Google Developers",
+                                        "source": "Google Developers"
+                                    },
+                                    {
+                                        "title": "Cross-validation in Machine Learning : IBM",
+                                        "source": "IBM"
+                                    },
+                                    {
+                                        "title": "Overfitting and Underfitting in Machine Learning : GeeksforGeeks",
+                                        "source": "GeeksforGeeks"
+                                    }
+                                ],
+                                "completed": false
+                            },
+                            {
+                                "block_title": "Debug Training Issues: Overfitting & Underfitting",
+                                "length": 45,
+                                "type": "theory",
+                                "objectives": [
+                                    "Diagnose overfitting and underfitting by analyzing training and validation curves.",
+                                    "Apply regularization techniques (e.g., L1/L2 regularization, Dropout) to mitigate overfitting.",
+                                    "Identify strategies to address underfitting, such as adding complexity or increasing training time."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "A Comprehensive Guide to Regularization : Analytics Vidhya",
+                                        "source": "Analytics Vidhya"
+                                    },
+                                    {
+                                        "title": "Dropout in Neural Networks : Towards Data Science",
+                                        "source": "Towards Data Science"
+                                    },
+                                    {
+                                        "title": "Understanding Underfitting and Overfitting : Machine Learning Mastery",
+                                        "source": "Machine Learning Mastery"
+                                    }
+                                ],
+                                "completed": false
+                            },
+                            {
+                                "block_title": "Visualize Training Progress: Loss and Accuracy Curves",
+                                "length": 30,
+                                "type": "exploration",
+                                "objectives": [
+                                    "Generate plots of training and validation loss/accuracy over epochs using *Matplotlib* or *Seaborn*.",
+                                    "Interpret these plots to gain insights into model convergence and generalization.",
+                                    "Use visualization as a diagnostic tool for hyperparameter tuning."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Visualizing Keras Training History : PyImageSearch",
+                                        "source": "PyImageSearch"
+                                    },
+                                    {
+                                        "title": "Plotting Learning Curves : Machine Learning Mastery",
+                                        "source": "Machine Learning Mastery"
+                                    },
+                                    {
+                                        "title": "Matplotlib Tutorial for Data Visualization : W3Schools",
+                                        "source": "W3Schools"
+                                    }
+                                ],
+                                "completed": false
+                            },
+                            {
+                                "block_title": "Evaluate Model Predictions: Classification & Regression",
+                                "length": 30,
+                                "type": "exploration",
+                                "objectives": [
+                                    "Utilize the `evaluate()` method to assess a *Keras* model's performance on test data.",
+                                    "Generate predictions on new data using the `predict()` method.",
+                                    "Interpret the output of `predict()` for both classification (probabilities) and regression (continuous values) tasks."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Making Predictions with Keras : Keras.io",
+                                        "source": "Keras"
+                                    },
+                                    {
+                                        "title": "Evaluating Deep Learning Models : Analytics Vidhya",
+                                        "source": "Analytics Vidhya"
+                                    },
+                                    {
+                                        "title": "Understanding Probability Outputs in Classification : DataCamp",
+                                        "source": "DataCamp"
+                                    }
+                                ],
+                                "completed": false
+                            }
+                        ]
+                    },
+                    {
+                        "module_title": "Advanced Keras Features & Customization",
+                        "duration_hours": 3.0,
+                        "content_blocks": [
+                            {
+                                "block_title": "Build Complex Models: Keras Functional API",
+                                "length": 45,
+                                "type": "exploration",
+                                "objectives": [
+                                    "Construct multi-input and multi-output models using the *Keras* Functional API.",
+                                    "Implement shared layers and non-sequential network architectures (e.g., skip connections, merged branches).",
+                                    "Compare the `Sequential` API with the Functional API and identify use cases for each."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "The Keras Functional API : Keras.io",
+                                        "source": "Keras"
+                                    },
+                                    {
+                                        "title": "Building Complex Models with Keras : Machine Learning Mastery",
+                                        "source": "Machine Learning Mastery"
+                                    },
+                                    {
+                                        "title": "Introduction to the Keras Functional API : TensorFlow.org",
+                                        "source": "TensorFlow"
+                                    }
+                                ],
+                                "completed": false
+                            },
+                            {
+                                "block_title": "Create Custom Layers & Activation Functions",
+                                "length": 45,
+                                "type": "theory",
+                                "objectives": [
+                                    "Define custom *Keras* `Layer` subclasses to extend framework functionality.",
+                                    "Implement custom activation functions that are not natively available in *Keras*.",
+                                    "Explain the necessity of custom layers for specialized neural network architectures."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Writing Custom Layers and Models : Keras.io",
+                                        "source": "Keras"
+                                    },
+                                    {
+                                        "title": "Creating Custom Activation Functions : TensorFlow.org",
+                                        "source": "TensorFlow"
+                                    },
+                                    {
+                                        "title": "A Guide to Custom Keras Layers : Towards Data Science",
+                                        "source": "Towards Data Science"
+                                    }
+                                ],
+                                "completed": false
+                            },
+                            {
+                                "block_title": "Implement Custom Loss Functions",
+                                "length": 30,
+                                "type": "exploration",
+                                "objectives": [
+                                    "Write custom loss functions using *TensorFlow* operations to address specific task requirements.",
+                                    "Integrate custom loss functions into a *Keras* model during compilation.",
+                                    "Understand scenarios where standard loss functions are insufficient and custom ones are needed."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Custom Loss Functions in Keras : Keras.io",
+                                        "source": "Keras"
+                                    },
+                                    {
+                                        "title": "How to Create Custom Loss Functions : Machine Learning Mastery",
+                                        "source": "Machine Learning Mastery"
+                                    },
+                                    {
+                                        "title": "TensorFlow Custom Training Guide : TensorFlow.org",
+                                        "source": "TensorFlow"
+                                    }
+                                ],
+                                "completed": false
+                            },
+                            {
+                                "block_title": "Save and Load Pre-trained Models for Inference",
+                                "length": 30,
+                                "type": "exploration",
+                                "objectives": [
+                                    "Save *Keras* models in various formats (e.g., H5, SavedModel) for future use.",
+                                    "Load pre-trained models and perform inference on new data.",
+                                    "Understand the importance of model persistence for deployment and reproducibility."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Saving and Loading Keras Models : Keras.io",
+                                        "source": "Keras"
+                                    },
+                                    {
+                                        "title": "Guide to SavedModel Format : TensorFlow.org",
+                                        "source": "TensorFlow"
+                                    },
+                                    {
+                                        "title": "Deploying Keras Models : Analytics Vidhya",
+                                        "source": "Analytics Vidhya"
+                                    }
+                                ],
+                                "completed": false
+                            },
+                            {
+                                "block_title": "Extend Keras with Custom Training Loops",
+                                "length": 30,
+                                "type": "theory",
+                                "objectives": [
+                                    "Describe the components of a custom training loop in *TensorFlow* and *Keras*.",
+                                    "Explain when a custom training loop is necessary over the standard `model.fit()` method.",
+                                    "Outline the steps to implement a basic custom training loop for fine-grained control."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Writing a Custom Training Loop in Keras : Keras.io",
+                                        "source": "Keras"
+                                    },
+                                    {
+                                        "title": "TensorFlow Custom Training Overview : TensorFlow.org",
+                                        "source": "TensorFlow"
+                                    },
+                                    {
+                                        "title": "Building Custom Training Loops in Deep Learning : Medium",
+                                        "source": "Medium"
+                                    }
+                                ],
+                                "completed": false
+                            }
+                        ]
+                    }
+                ],
+                "hours_per_week": 0,
+                "week_milestone": {
+                    "milestone_title": "Build and Evaluate a Custom MLP for Binary Classification",
+                    "description": "Apply your knowledge of *TensorFlow* and *Keras* to build, train, and evaluate a custom Multi-Layer Perceptron (MLP) model for a real-world binary classification task. This project integrates data preparation, model architecture design, training optimization, and performance evaluation techniques learned throughout Week 2.",
+                    "objectives": [
+                        "Design a multi-layer perceptron architecture suitable for a given binary classification dataset.",
+                        "Implement and train the MLP model using *TensorFlow* and the *Keras* Sequential API or Functional API.",
+                        "Evaluate the model's performance using appropriate metrics (e.g., accuracy, precision, recall, F1-score) and visualize training progress.",
+                        "Optimize model parameters and troubleshoot common training issues like overfitting or underfitting."
+                    ],
+                    "prerequisites": [
+                        "Module:2.1",
+                        "Module:2.2",
+                        "Module:2.3",
+                        "Module:2.4"
+                    ],
+                    "deliverables": [
+                        "Python script (.py) or Jupyter Notebook (.ipynb) with the implemented model and training code",
+                        "Brief technical report (PDF) summarizing model design, training process, evaluation results, and conclusions"
+                    ],
+                    "upload_required": true,
+                    "supported_filetypes": [
+                        ".py",
+                        ".ipynb",
+                        ".pdf"
+                    ],
+                    "references": [
+                        {
+                            "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow : O'Reilly",
+                            "source": "O'Reilly"
+                        },
+                        {
+                            "title": "Keras Documentation : Keras.io",
+                            "source": "Keras"
+                        },
+                        {
+                            "title": "TensorFlow Tutorials : TensorFlow.org",
+                            "source": "TensorFlow"
+                        },
+                        {
+                            "title": "Effective MLPs for Classification Tasks : Towards Data Science",
+                            "source": "Towards Data Science"
+                        }
+                    ],
+                    "length": "3 hours",
+                    "type": "exploration"
+                }
+            },
+            {
+                "week_number": 3,
+                "week_topic": "Mastering Specialized Architectures: CNNs & RNNs for Job-Ready Skills",
+                "week_modules": [
+                    {
+                        "module_title": "Deep Dive into Convolutional Neural Networks (CNNs)",
+                        "duration_hours": 3.0,
+                        "content_blocks": [
+                            {
+                                "block_title": "Construct the CNN Foundation: Visualizing Feature Maps",
+                                "length": 45,
+                                "type": "theory",
+                                "objectives": [
+                                    "Define the core components of a CNN and their purpose.",
+                                    "Construct a conceptual understanding of how convolutional layers extract features.",
+                                    "Visualize the effect of different filters on input images."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Convolutional Neural Networks for Visual Recognition: Foundations",
+                                        "source": "Stanford CS231n Notes"
+                                    },
+                                    {
+                                        "title": "Understanding CNNs: The Magic Behind Computer Vision",
+                                        "source": "Towards Data Science"
+                                    },
+                                    {
+                                        "title": "A Comprehensive Guide to Convolutional Neural Networks",
+                                        "source": "Analytics Vidhya"
+                                    }
+                                ],
+                                "completed": false
+                            },
+                            {
+                                "block_title": "Analyze Convolutional Layers and Pooling",
+                                "length": 45,
+                                "type": "theory",
+                                "objectives": [
+                                    "Analyze the impact of kernel size, stride, and padding on feature maps.",
+                                    "Distinguish between different pooling operations (max, average) and their use cases.",
+                                    "Evaluate the computational benefits of pooling layers in CNNs."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Convolutional Neural Network (CNN) Basics",
+                                        "source": "GeeksforGeeks"
+                                    },
+                                    {
+                                        "title": "Pooling Layers in CNNs Explained",
+                                        "source": "Machine Learning Mastery"
+                                    },
+                                    {
+                                        "title": "Demystifying CNNs: A Walkthrough of Convolutional Neural Networks",
+                                        "source": "IBM Developer"
+                                    }
+                                ],
+                                "completed": false
+                            },
+                            {
+                                "block_title": "Implement Activation Functions and Dropout Layers",
+                                "length": 45,
+                                "type": "exploration",
+                                "objectives": [
+                                    "Implement common activation functions (ReLU, Sigmoid, Tanh) within CNN layers.",
+                                    "Apply dropout layers to mitigate overfitting in CNN models.",
+                                    "Evaluate the practical impact of different activation functions on model performance."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Understanding Activation Functions in Neural Networks",
+                                        "source": "Keras Blog"
+                                    },
+                                    {
+                                        "title": "Dropout Regularization in Deep Learning",
+                                        "source": "Towards Data Science"
+                                    },
+                                    {
+                                        "title": "Implementing ReLU, Sigmoid, and Tanh",
+                                        "source": "PyTorch Documentation"
+                                    }
+                                ],
+                                "completed": false
+                            },
+                            {
+                                "block_title": "Evaluate Core CNN Architectures",
+                                "length": 45,
+                                "type": "theory",
+                                "objectives": [
+                                    "Evaluate the architectural design principles of classic CNNs like *LeNet*, *AlexNet*, and *VGGNet*.",
+                                    "Analyze the trade-offs between depth, complexity, and performance in CNN models.",
+                                    "Compare the evolution of CNN design and its implications for modern computer vision."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "A Comprehensive Overview of Convolutional Neural Networks Architectures",
+                                        "source": "Medium"
+                                    },
+                                    {
+                                        "title": "The 7 Deep Learning Architectures You Must Know",
+                                        "source": "Towards Data Science"
+                                    },
+                                    {
+                                        "title": "ImageNet Classification with Deep Convolutional Neural Networks",
+                                        "source": "ResearchGate (AlexNet paper summary)"
+                                    }
+                                ],
+                                "completed": false
+                            }
+                        ]
+                    },
+                    {
+                        "module_title": "Practical CNN Architectures & Transfer Learning",
+                        "duration_hours": 3.0,
+                        "content_blocks": [
+                            {
+                                "block_title": "Build Image Classifiers with *TensorFlow* and *Keras*",
+                                "length": 45,
+                                "type": "exploration",
+                                "objectives": [
+                                    "Build a basic image classification CNN using the *Keras* API.",
+                                    "Train and evaluate a custom CNN model on a simple image dataset.",
+                                    "Apply *TensorFlow*'s Dataset API for efficient data loading."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Image classification from scratch",
+                                        "source": "Keras.io"
+                                    },
+                                    {
+                                        "title": "Introduction to Keras for Image Classification",
+                                        "source": "PyImageSearch"
+                                    },
+                                    {
+                                        "title": "CNN Architectures with TensorFlow",
+                                        "source": "TensorFlow Tutorials"
+                                    }
+                                ],
+                                "completed": false
+                            },
+                            {
+                                "block_title": "Apply Pre-trained Models and Transfer Learning",
+                                "length": 45,
+                                "type": "exploration",
+                                "objectives": [
+                                    "Apply pre-trained CNN models (e.g., *ResNet*, *VGG*) to new image classification tasks.",
+                                    "Fine-tune pre-trained models using transfer learning techniques.",
+                                    "Evaluate the benefits of transfer learning for rapid model development."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Transfer learning and fine-tuning",
+                                        "source": "Keras.io"
+                                    },
+                                    {
+                                        "title": "A Gentle Introduction to Transfer Learning for Deep Learning",
+                                        "source": "Machine Learning Mastery"
+                                    },
+                                    {
+                                        "title": "Using a pre-trained CNN model in Keras",
+                                        "source": "TensorFlow Documentation"
+                                    }
+                                ],
+                                "completed": false
+                            },
+                            {
+                                "block_title": "Optimize CNN Performance with Data Augmentation",
+                                "length": 45,
+                                "type": "exploration",
+                                "objectives": [
+                                    "Implement various data augmentation techniques (e.g., rotation, flipping) to expand dataset size.",
+                                    "Apply data augmentation strategies to improve CNN generalization.",
+                                    "Analyze the impact of data augmentation on model accuracy and robustness."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "ImageDataGenerator: Keras Tutorial on Image Augmentation",
+                                        "source": "PyImageSearch"
+                                    },
+                                    {
+                                        "title": "Data Augmentation for Deep Learning",
+                                        "source": "Towards Data Science"
+                                    },
+                                    {
+                                        "title": "Understanding Image Augmentation for CNNs",
+                                        "source": "Weights & Biases"
+                                    }
+                                ],
+                                "completed": false
+                            },
+                            {
+                                "block_title": "Debug Common CNN Training Issues",
+                                "length": 45,
+                                "type": "exploration",
+                                "objectives": [
+                                    "Identify common CNN training issues such as overfitting, underfitting, and vanishing/exploding gradients.",
+                                    "Apply debugging strategies for CNNs, including learning rate adjustments and regularization techniques.",
+                                    "Evaluate model training curves to diagnose performance problems."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "How to Debug Neural Networks",
+                                        "source": "Google Developers Blog"
+                                    },
+                                    {
+                                        "title": "Troubleshooting Deep Learning Models",
+                                        "source": "Paperspace Blog"
+                                    },
+                                    {
+                                        "title": "Common Pitfalls in CNN Training",
+                                        "source": "KDnuggets"
+                                    }
+                                ],
+                                "completed": false
+                            }
+                        ]
+                    },
+                    {
+                        "module_title": "Recurrent Neural Networks (RNNs) for Sequence Data",
+                        "duration_hours": 3.0,
+                        "content_blocks": [
+                            {
+                                "block_title": "Understand Sequential Data Processing with RNNs",
+                                "length": 45,
+                                "type": "theory",
+                                "objectives": [
+                                    "Define the concept of sequential data and its challenges for traditional neural networks.",
+                                    "Understand the fundamental architecture of a simple RNN cell and its hidden state.",
+                                    "Illustrate how RNNs process sequences step-by-step."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Recurrent Neural Networks Tutorial",
+                                        "source": "TensorFlow Tutorials"
+                                    },
+                                    {
+                                        "title": "Understanding RNNs (Recurrent Neural Networks)",
+                                        "source": "Towards Data Science"
+                                    },
+                                    {
+                                        "title": "The Unreasonable Effectiveness of Recurrent Neural Networks",
+                                        "source": "Andrej Karpathy Blog"
+                                    }
+                                ],
+                                "completed": false
+                            },
+                            {
+                                "block_title": "Construct Simple RNN Architectures",
+                                "length": 45,
+                                "type": "exploration",
+                                "objectives": [
+                                    "Construct a simple RNN model using *Keras* for basic sequence prediction.",
+                                    "Train an RNN on a toy sequential dataset.",
+                                    "Evaluate the output of an RNN for sequence-to-sequence mapping."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "A Gentle Introduction to Keras Recurrent Neural Networks",
+                                        "source": "Machine Learning Mastery"
+                                    },
+                                    {
+                                        "title": "Building your first Recurrent Neural Network in Keras",
+                                        "source": "Analytics Vidhya"
+                                    },
+                                    {
+                                        "title": "Recurrent Neural Network Example with TensorFlow",
+                                        "source": "Python Code Examples"
+                                    }
+                                ],
+                                "completed": false
+                            },
+                            {
+                                "block_title": "Analyze Vanishing Gradients and LSTMs/GRUs",
+                                "length": 45,
+                                "type": "theory",
+                                "objectives": [
+                                    "Analyze the problem of vanishing/exploding gradients in traditional RNNs.",
+                                    "Differentiate between Long Short-Term Memory (*LSTM*) and Gated Recurrent Unit (*GRU*) architectures.",
+                                    "Understand how *LSTM* and *GRU* cells address the long-term dependency problem."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Understanding LSTMs",
+                                        "source": "Colah's Blog"
+                                    },
+                                    {
+                                        "title": "A Beginner's Guide to LSTMs and GRUs",
+                                        "source": "Towards Data Science"
+                                    },
+                                    {
+                                        "title": "The Vanishing Gradient Problem Explained",
+                                        "source": "GeeksforGeeks"
+                                    }
+                                ],
+                                "completed": false
+                            },
+                            {
+                                "block_title": "Implement Bidirectional RNNs",
+                                "length": 45,
+                                "type": "exploration",
+                                "objectives": [
+                                    "Implement a Bidirectional *LSTM* network for improved sequence context understanding.",
+                                    "Apply Bidirectional RNNs to a simple natural language processing task.",
+                                    "Evaluate the performance improvement of Bidirectional RNNs over unidirectional models."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Bidirectional LSTMs Explained",
+                                        "source": "Analytics Vidhya"
+                                    },
+                                    {
+                                        "title": "Building a Bidirectional LSTM in Keras",
+                                        "source": "Keras Documentation"
+                                    },
+                                    {
+                                        "title": "Introduction to Bidirectional RNNs",
+                                        "source": "IBM Watson"
+                                    }
+                                ],
+                                "completed": false
+                            }
+                        ]
+                    },
+                    {
+                        "module_title": "Advanced RNNs and Practical Applications",
+                        "duration_hours": 3.0,
+                        "content_blocks": [
+                            {
+                                "block_title": "Build Text Classification Models with RNNs",
+                                "length": 45,
+                                "type": "exploration",
+                                "objectives": [
+                                    "Build an *LSTM*-based model for sentiment analysis or text classification.",
+                                    "Preprocess text data for RNN input, including tokenization and padding.",
+                                    "Evaluate the performance of RNNs on various text classification datasets."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Text Classification with Keras and LSTMs",
+                                        "source": "Keras Examples"
+                                    },
+                                    {
+                                        "title": "A Guide to Text Classification with RNNs",
+                                        "source": "Medium"
+                                    },
+                                    {
+                                        "title": "Sentiment Analysis using Recurrent Neural Networks",
+                                        "source": "GeeksforGeeks"
+                                    }
+                                ],
+                                "completed": false
+                            },
+                            {
+                                "block_title": "Generate Sequences with RNNs",
+                                "length": 45,
+                                "type": "exploration",
+                                "objectives": [
+                                    "Design an RNN model capable of generating sequences, such as character-level text generation.",
+                                    "Implement a training loop for sequence generation models.",
+                                    "Create novel sequences based on a trained RNN model."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Text generation with an RNN",
+                                        "source": "TensorFlow Tutorials"
+                                    },
+                                    {
+                                        "title": "Building a Simple Character-Level LSTM Text Generator",
+                                        "source": "Towards Data Science"
+                                    },
+                                    {
+                                        "title": "Sequence Generation with RNNs in Keras",
+                                        "source": "Machine Learning Mastery"
+                                    }
+                                ],
+                                "completed": false
+                            },
+                            {
+                                "block_title": "Deploy RNNs for Time Series Prediction",
+                                "length": 45,
+                                "type": "exploration",
+                                "objectives": [
+                                    "Prepare time series data for input into RNN models.",
+                                    "Deploy an *LSTM* network for time series forecasting (e.g., stock prices, weather data).",
+                                    "Evaluate time series model performance using appropriate metrics like RMSE."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Time Series Forecasting with LSTMs in Python",
+                                        "source": "Machine Learning Mastery"
+                                    },
+                                    {
+                                        "title": "Introduction to Time Series Forecasting with LSTMs",
+                                        "source": "IBM Developer"
+                                    },
+                                    {
+                                        "title": "Recurrent Neural Networks for Time Series Analysis",
+                                        "source": "Medium"
+                                    }
+                                ],
+                                "completed": false
+                            },
+                            {
+                                "block_title": "Compare and Select Appropriate Sequence Models",
+                                "length": 45,
+                                "type": "theory",
+                                "objectives": [
+                                    "Compare the strengths and weaknesses of different RNN variants (*Simple RNN*, *LSTM*, *GRU*, *Bidirectional*) for various tasks.",
+                                    "Analyze the suitability of CNNs versus RNNs for specific sequence-related problems.",
+                                    "Select the most appropriate neural network architecture based on data characteristics and problem requirements."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "When to use CNNs, RNNs, and LSTMs",
+                                        "source": "Towards Data Science"
+                                    },
+                                    {
+                                        "title": "Recurrent Neural Networks vs. Convolutional Neural Networks",
+                                        "source": "GeeksforGeeks"
+                                    },
+                                    {
+                                        "title": "Choosing the Right Neural Network Architecture",
+                                        "source": "Analytics India Magazine"
+                                    }
+                                ],
+                                "completed": false
+                            }
+                        ]
+                    }
+                ],
+                "hours_per_week": 0,
+                "week_milestone": {
+                    "milestone_title": "Build and Evaluate a Specialized Neural Network Model",
+                    "description": "This milestone challenges you to design, implement, and evaluate either a Convolutional Neural Network (CNN) for an image classification task or a Recurrent Neural Network (RNN) for a sequence prediction task. You will apply concepts learned throughout the week, including architecture selection, data preprocessing, training, and performance evaluation. This project is designed to serve as a portfolio piece.",
+                    "objectives": [
+                        "Design an appropriate specialized neural network architecture (CNN or RNN) for a given problem.",
+                        "Implement the chosen neural network using *TensorFlow* and *Keras*.",
+                        "Preprocess the dataset and apply techniques like data augmentation or sequence handling.",
+                        "Train the model, monitor performance, and apply debugging strategies.",
+                        "Evaluate the model's performance using relevant metrics and present your findings."
+                    ],
+                    "prerequisites": [
+                        "Module:3.1",
+                        "Module:3.2",
+                        "Module:3.3",
+                        "Module:3.4"
+                    ],
+                    "deliverables": [
+                        "Jupyter Notebook (.ipynb) or Python script (.py) with commented code.",
+                        "A brief report (PDF) summarizing the problem, chosen architecture, training process, and results.",
+                        "Trained model weights (optional, if within reasonable file size limits)."
+                    ],
+                    "upload_required": true,
+                    "supported_filetypes": [
+                        ".ipynb",
+                        ".py",
+                        ".pdf"
+                    ],
+                    "references": [
+                        {
+                            "title": "Keras: The Python Deep Learning API",
+                            "source": "Keras.io"
+                        },
+                        {
+                            "title": "TensorFlow Core APIs for Model Building",
+                            "source": "TensorFlow Documentation"
+                        },
+                        {
+                            "title": "How to Structure a Machine Learning Project",
+                            "source": "Towards Data Science"
+                        },
+                        {
+                            "title": "Best Practices for Deep Learning Model Evaluation",
+                            "source": "IBM Developer"
+                        }
+                    ],
+                    "length": "180 minutes",
+                    "type": "exploration"
+                }
+            },
+            {
+                "week_number": 4,
+                "week_topic": "Advanced Strategies & Portfolio Project: Deploying Your Intelligent System",
+                "week_modules": [
+                    {
+                        "module_title": "Optimizing & Debugging Advanced Models",
+                        "duration_hours": 3.0,
+                        "content_blocks": [
+                            {
+                                "block_title": "Calibrate Hyperparameters for Performance",
+                                "length": 45,
+                                "type": "theory",
+                                "objectives": [
+                                    "Analyze the impact of different hyperparameters on model performance.",
+                                    "Apply advanced hyperparameter tuning techniques like grid search and random search with *Scikit-learn*.",
+                                    "Evaluate model performance metrics for optimal hyperparameter selection."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Hyperparameter Tuning for Neural Networks : Towards Data Science",
+                                        "source": "towardsdatascience.com"
+                                    },
+                                    {
+                                        "title": "A Guide to Keras Tuner : Keras Documentation",
+                                        "source": "keras.io"
+                                    },
+                                    {
+                                        "title": "Understanding Cross-Validation : Machine Learning Mastery",
+                                        "source": "machinelearningmastery.com"
+                                    }
+                                ],
+                                "completed": false
+                            },
+                            {
+                                "block_title": "Debug Common Neural Network Issues",
+                                "length": 45,
+                                "type": "exploration",
+                                "objectives": [
+                                    "Diagnose common issues in neural networks, such as overfitting and underfitting.",
+                                    "Apply regularization techniques (*L1*, *L2*, *Dropout*) to prevent overfitting.",
+                                    "Utilize visualization tools to inspect model training progress and identify anomalies."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Debugging Neural Networks : Distill.pub",
+                                        "source": "distill.pub"
+                                    },
+                                    {
+                                        "title": "How to Debug Neural Networks : DataCamp",
+                                        "source": "datacamp.com"
+                                    },
+                                    {
+                                        "title": "Common Pitfalls in Neural Network Training : Analytics Vidhya",
+                                        "source": "analyticsvidhya.com"
+                                    }
+                                ],
+                                "completed": false
+                            },
+                            {
+                                "block_title": "Evaluate Model Robustness & Bias",
+                                "length": 45,
+                                "type": "theory",
+                                "objectives": [
+                                    "Identify potential sources of bias in datasets and neural network models.",
+                                    "Analyze methods for evaluating model fairness and robustness.",
+                                    "Construct strategies for mitigating bias and improving model generalizability."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Fairness in AI : IBM AI Fairness 360",
+                                        "source": "aif360.mybluemix.net"
+                                    },
+                                    {
+                                        "title": "Understanding Model Robustness : Google AI Blog",
+                                        "source": "ai.googleblog.com"
+                                    },
+                                    {
+                                        "title": "Ethical AI: From Principles to Practice : McKinsey & Company",
+                                        "source": "mckinsey.com"
+                                    }
+                                ],
+                                "completed": false
+                            },
+                            {
+                                "block_title": "Audit Ethical Implications of AI Models",
+                                "length": 45,
+                                "type": "theory",
+                                "objectives": [
+                                    "Examine the ethical frameworks and considerations in AI development and deployment.",
+                                    "Evaluate the societal impact of intelligent systems.",
+                                    "Propose best practices for responsible AI development."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "The Malicious Use of AI: Forecasting, Prevention, and Mitigation : Future of Humanity Institute",
+                                        "source": "fhi.ox.ac.uk"
+                                    },
+                                    {
+                                        "title": "AI Ethics Guidelines Global Landscape : Stanford HAI",
+                                        "source": "hai.stanford.edu"
+                                    },
+                                    {
+                                        "title": "Building Trust in AI Systems : Deloitte Insights",
+                                        "source": "deloitte.com"
+                                    }
+                                ],
+                                "completed": false
+                            }
+                        ]
+                    },
+                    {
+                        "module_title": "Mastering Transfer Learning & Fine-Tuning",
+                        "duration_hours": 3.0,
+                        "content_blocks": [
+                            {
+                                "block_title": "Leverage Pre-trained Models for Efficiency",
+                                "length": 45,
+                                "type": "theory",
+                                "objectives": [
+                                    "Define transfer learning and its advantages in deep learning.",
+                                    "Understand the architecture and training of popular pre-trained models (*ImageNet*, *BERT*).",
+                                    "Identify scenarios where transfer learning is most beneficial."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "A Gentle Introduction to Transfer Learning for Deep Learning : Machine Learning Mastery",
+                                        "source": "machinelearningmastery.com"
+                                    },
+                                    {
+                                        "title": "Transfer Learning with TensorFlow : TensorFlow Documentation",
+                                        "source": "tensorflow.org"
+                                    },
+                                    {
+                                        "title": "The Illustrated BERT, ELMo, and co. : Jay Alammar",
+                                        "source": "jalammar.github.io"
+                                    }
+                                ],
+                                "completed": false
+                            },
+                            {
+                                "block_title": "Fine-Tune Models for Specific Tasks",
+                                "length": 45,
+                                "type": "exploration",
+                                "objectives": [
+                                    "Implement fine-tuning strategies for pre-trained convolutional and recurrent networks.",
+                                    "Experiment with freezing layers and adapting the final classification layers.",
+                                    "Evaluate the performance of fine-tuned models on new datasets."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Fine-tuning a pre-trained model : Keras Documentation",
+                                        "source": "keras.io"
+                                    },
+                                    {
+                                        "title": "Transfer Learning Tutorial with PyTorch : PyTorch Documentation",
+                                        "source": "pytorch.org"
+                                    },
+                                    {
+                                        "title": "How to Fine-Tune a Pre-Trained Model : Towards Data Science",
+                                        "source": "towardsdatascience.com"
+                                    }
+                                ],
+                                "completed": false
+                            },
+                            {
+                                "block_title": "Select Appropriate Architectures for Transfer Learning",
+                                "length": 45,
+                                "type": "theory",
+                                "objectives": [
+                                    "Compare and contrast various pre-trained architectures (e.g., *ResNet*, *VGG*, *Inception*, *MobileNet*).",
+                                    "Justify the selection of a specific pre-trained model based on problem constraints and data characteristics.",
+                                    "Explain the trade-offs between model size, inference speed, and accuracy in transfer learning."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Image Classification Models : TensorFlow Documentation",
+                                        "source": "tensorflow.org"
+                                    },
+                                    {
+                                        "title": "A Guide to Transfer Learning : IBM Developer",
+                                        "source": "developer.ibm.com"
+                                    },
+                                    {
+                                        "title": "Deep Learning Architectures: A Survey : arXiv",
+                                        "source": "arxiv.org"
+                                    }
+                                ],
+                                "completed": false
+                            },
+                            {
+                                "block_title": "Apply Transfer Learning to Novel Datasets",
+                                "length": 45,
+                                "type": "exploration",
+                                "objectives": [
+                                    "Preprocess and prepare a new, small dataset for transfer learning.",
+                                    "Train and evaluate a transfer learning model on a custom dataset.",
+                                    "Interpret the results and suggest improvements for real-world scenarios."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Transfer learning and fine-tuning : TensorFlow Blog",
+                                        "source": "tensorflow.googleblog.com"
+                                    },
+                                    {
+                                        "title": "Transfer Learning for Computer Vision Tutorial : PyTorch Documentation",
+                                        "source": "pytorch.org"
+                                    },
+                                    {
+                                        "title": "Practical Transfer Learning for Computer Vision : Kaggle",
+                                        "source": "kaggle.com"
+                                    }
+                                ],
+                                "completed": false
+                            }
+                        ]
+                    },
+                    {
+                        "module_title": "Deploying Neural Networks",
+                        "duration_hours": 3.0,
+                        "content_blocks": [
+                            {
+                                "block_title": "Containerize Models with *Docker* for Deployment",
+                                "length": 45,
+                                "type": "exploration",
+                                "objectives": [
+                                    "Explain the benefits of containerization for model deployment.",
+                                    "Construct a *Dockerfile* to package a trained neural network and its dependencies.",
+                                    "Build and run *Docker* images for local model testing."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Dockerizing a Machine Learning Model : Towards Data Science",
+                                        "source": "towardsdatascience.com"
+                                    },
+                                    {
+                                        "title": "Get Started with Docker : Docker Documentation",
+                                        "source": "docs.docker.com"
+                                    },
+                                    {
+                                        "title": "Deploying Machine Learning Models with Docker : Medium",
+                                        "source": "medium.com"
+                                    }
+                                ],
+                                "completed": false
+                            },
+                            {
+                                "block_title": "Deploy Models to Cloud Platforms (*AWS*, *Azure*, *GCP*)",
+                                "length": 45,
+                                "type": "exploration",
+                                "objectives": [
+                                    "Compare common cloud deployment options for machine learning models.",
+                                    "Deploy a containerized neural network to a cloud service (e.g., *AWS Sagemaker*, *Azure ML*, *GCP AI Platform*).",
+                                    "Configure endpoints for real-time inference requests."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Deploying Keras Models to Production : Keras Documentation",
+                                        "source": "keras.io"
+                                    },
+                                    {
+                                        "title": "Amazon SageMaker for Machine Learning : AWS Documentation",
+                                        "source": "aws.amazon.com"
+                                    },
+                                    {
+                                        "title": "Azure Machine Learning Service : Microsoft Docs",
+                                        "source": "docs.microsoft.com"
+                                    }
+                                ],
+                                "completed": false
+                            },
+                            {
+                                "block_title": "Monitor Deployed Models in Production",
+                                "length": 45,
+                                "type": "theory",
+                                "objectives": [
+                                    "Identify key metrics for monitoring deployed neural network performance.",
+                                    "Understand concepts like data drift and model drift.",
+                                    "Design a basic monitoring dashboard for a deployed model."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Monitoring Machine Learning Models in Production : Google Cloud Blog",
+                                        "source": "cloud.google.com"
+                                    },
+                                    {
+                                        "title": "Model Monitoring: The What, Why, and How : Neptune.ai",
+                                        "source": "neptune.ai"
+                                    },
+                                    {
+                                        "title": "Best Practices for MLOps : Microsoft Azure",
+                                        "source": "azure.microsoft.com"
+                                    }
+                                ],
+                                "completed": false
+                            },
+                            {
+                                "block_title": "Secure AI Models Against Adversarial Attacks",
+                                "length": 45,
+                                "type": "theory",
+                                "objectives": [
+                                    "Explain common types of adversarial attacks on neural networks.",
+                                    "Analyze techniques for making models more robust to adversarial examples.",
+                                    "Propose security measures for protecting deployed AI systems."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Adversarial Examples in Deep Learning : IBM",
+                                        "source": "ibm.com"
+                                    },
+                                    {
+                                        "title": "Introduction to Adversarial Machine Learning : Towards Data Science",
+                                        "source": "towardsdatascience.com"
+                                    },
+                                    {
+                                        "title": "The Threat of Adversarial Attacks : Deep Learning AI",
+                                        "source": "deeplearning.ai"
+                                    }
+                                ],
+                                "completed": false
+                            }
+                        ]
+                    },
+                    {
+                        "module_title": "Preparing for the Job Market",
+                        "duration_hours": 3.0,
+                        "content_blocks": [
+                            {
+                                "block_title": "Showcase Your Neural Network Portfolio",
+                                "length": 45,
+                                "type": "exploration",
+                                "objectives": [
+                                    "Identify key components of a strong machine learning portfolio.",
+                                    "Curate and refine personal projects for maximum impact.",
+                                    "Develop a compelling narrative around your technical contributions."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Building a Machine Learning Portfolio : Towards Data Science",
+                                        "source": "towardsdatascience.com"
+                                    },
+                                    {
+                                        "title": "Data Science Portfolio Checklist : DataCamp",
+                                        "source": "datacamp.com"
+                                    },
+                                    {
+                                        "title": "How to Build a Data Science Portfolio : Interview Query",
+                                        "source": "interviewquery.com"
+                                    }
+                                ],
+                                "completed": false
+                            },
+                            {
+                                "block_title": "Articulate Technical Concepts in Interviews",
+                                "length": 45,
+                                "type": "theory",
+                                "objectives": [
+                                    "Practice explaining complex neural network concepts clearly and concisely.",
+                                    "Formulate answers to common machine learning interview questions.",
+                                    "Strategize for technical discussions and whiteboarding sessions."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "Top Neural Network Interview Questions : Great Learning",
+                                        "source": "mygreatlearning.com"
+                                    },
+                                    {
+                                        "title": "Cracking the ML Interview : Google AI Blog",
+                                        "source": "ai.googleblog.com"
+                                    },
+                                    {
+                                        "title": "How to Ace Your Machine Learning Interview : CareerFoundry",
+                                        "source": "careerfoundry.com"
+                                    }
+                                ],
+                                "completed": false
+                            },
+                            {
+                                "block_title": "Identify Industry Trends & Job Opportunities",
+                                "length": 45,
+                                "type": "theory",
+                                "objectives": [
+                                    "Research current trends in AI and deep learning.",
+                                    "Identify in-demand job roles and required skill sets in the AI industry.",
+                                    "Analyze job descriptions to tailor your application materials."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "The State of AI in 2023 : McKinsey & Company",
+                                        "source": "mckinsey.com"
+                                    },
+                                    {
+                                        "title": "AI Jobs Report : LinkedIn Talent Solutions",
+                                        "source": "linkedin.com"
+                                    },
+                                    {
+                                        "title": "Top AI and Machine Learning Skills : Towards Data Science",
+                                        "source": "towardsdatascience.com"
+                                    }
+                                ],
+                                "completed": false
+                            },
+                            {
+                                "block_title": "Strategize for Continuous AI Skill Development",
+                                "length": 45,
+                                "type": "theory",
+                                "objectives": [
+                                    "Develop a personalized learning plan for ongoing skill enhancement in AI.",
+                                    "Explore resources for staying updated with the latest research and technologies.",
+                                    "Cultivate a mindset of continuous learning and adaptation in the AI field."
+                                ],
+                                "references": [
+                                    {
+                                        "title": "How to Stay Up-to-Date in AI : Medium",
+                                        "source": "medium.com"
+                                    },
+                                    {
+                                        "title": "The AI Learning Path : Coursera Blog",
+                                        "source": "coursera.org"
+                                    },
+                                    {
+                                        "title": "Building a Lifelong Learning Habit in Tech : TechRepublic",
+                                        "source": "techrepublic.com"
+                                    }
+                                ],
+                                "completed": false
+                            }
+                        ]
+                    }
+                ],
+                "hours_per_week": 0,
+                "week_milestone": {
+                    "milestone_title": "Deploy a Production-Ready Intelligent System",
+                    "description": "Integrate concepts from all modules to design, train, and deploy a neural network solution for a selected real-world problem. This project culminates in a documented, potentially hosted, application suitable for a professional portfolio.",
+                    "objectives": [
+                        "Design an end-to-end neural network solution addressing a specified real-world problem.",
+                        "Implement and fine-tune a neural network using appropriate frameworks and techniques.",
+                        "Containerize and deploy the trained model to a cloud platform.",
+                        "Document the project, including architecture, training process, and deployment steps, for portfolio presentation."
+                    ],
+                    "prerequisites": [
+                        "Module:1.1",
+                        "Module:2.1",
+                        "Module:3.1",
+                        "Module:4.1",
+                        "Block:4.3.2"
+                    ],
+                    "deliverables": [
+                        "Functional neural network application code",
+                        "Deployment script or configuration files",
+                        "Project documentation (e.g., *README.md*, technical report)",
+                        "Optional: Link to a live demo or deployed endpoint"
+                    ],
+                    "upload_required": true,
+                    "supported_filetypes": [
+                        ".py",
+                        ".ipynb",
+                        ".md",
+                        ".zip",
+                        ".pdf"
+                    ],
+                    "references": [
+                        {
+                            "title": "Designing a Robust Machine Learning System : Google Cloud",
+                            "source": "cloud.google.com"
+                        },
+                        {
+                            "title": "MLOps: A Guide to Production Machine Learning : Towards Data Science",
+                            "source": "towardsdatascience.com"
+                        },
+                        {
+                            "title": "Building Your First API with Flask and Keras : FreeCodeCamp",
+                            "source": "freecodecamp.org"
+                        },
+                        {
+                            "title": "Structuring a Machine Learning Project : Deep Learning AI",
+                            "source": "deeplearning.ai"
+                        }
+                    ],
+                    "length": "4 hours",
+                    "type": "exploration"
+                }
+            }
+        ],
+        "course_milestone": {
+            "milestone_title": "Deploy a Diagnostic AI System for Medical Imaging",
+            "description": "This culminating milestone challenges you to build and prepare for deployment a deep learning system designed to classify medical images, simulating a real-world application in healthcare diagnostics. You will apply foundational neural network concepts (Week 1), leverage *TensorFlow* and *Keras* for model construction and training (Week 2), implement and fine-tune advanced Convolutional Neural Network (*CNN*) architectures with *transfer learning* (Week 3), and outline a deployment strategy for your intelligent system (Week 4), consolidating your skills for a career in AI.",
+            "objectives": [
+                "Design and implement a robust Convolutional Neural Network (*CNN*) using *TensorFlow*/*Keras* for a medical image classification task, demonstrating proficiency in model architecture and training.",
+                "Apply advanced techniques like *transfer learning*, *data augmentation*, and *hyperparameter tuning* to optimize model performance and generalization on a novel, real-world dataset.",
+                "Evaluate the trained model's performance using appropriate metrics (e.g., precision, recall, F1-score) and systematically debug common issues encountered during complex deep learning projects.",
+                "Develop a deployment readiness plan, including *containerization* concepts (*Docker*) and cloud considerations, demonstrating an end-to-end understanding of the AI model lifecycle for production."
+            ],
+            "prerequisites": [
+                "Module:1.2",
+                "Module:1.3",
+                "Module:2.2",
+                "Module:3.1",
+                "Module:3.2",
+                "Module:4.2",
+                "Module:4.3"
+            ],
+            "deliverables": [
+                "A well-commented *Python* codebase (Jupyter Notebook or scripts) for data loading, model training, evaluation, and inference.",
+                "A trained deep learning model file (e.g., *.h5* or *SavedModel* format) for the medical image classification task.",
+                "A concise project report (PDF or Markdown) detailing the methodology, model architecture, training process, evaluation results, and key insights.",
+                "A conceptual deployment strategy document outlining the steps for containerization (*Docker*) and potential cloud platform deployment for the trained model."
+            ],
+            "upload_required": true,
+            "supported_filetypes": [
+                ".py",
+                ".ipynb",
+                ".h5",
+                ".pb",
+                ".pdf",
+                ".md"
+            ],
+            "references": [
+                {
+                    "title": "Deep Learning for Medical Image Analysis: Challenges and Future Directions",
+                    "source": "Journal of Medical Imaging"
+                },
+                {
+                    "title": "Practical Transfer Learning in *TensorFlow* and *Keras*",
+                    "source": "O'Reilly Media"
+                },
+                {
+                    "title": "Effective Strategies for Hyperparameter Tuning in Deep Learning",
+                    "source": "AI Magazine"
+                },
+                {
+                    "title": "MLOps Principles: Building a Production Machine Learning System",
+                    "source": "Google Cloud Blog"
+                }
+            ],
+            "length": "10 hours",
+            "type": "exploration"
+        }
+    },
+    "user_requirement": {
+        "experience": "I've tried it before",
+        "learning_style": "Quick Course",
+        "motivation": "Get a better job"
+    }
+}

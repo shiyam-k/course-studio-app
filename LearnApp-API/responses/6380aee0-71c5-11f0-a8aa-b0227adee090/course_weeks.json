@@ -1,0 +1,90 @@
+[
+    {
+        "WeekNumber": 1,
+        "WeekTopic": "Python Fundamentals",
+        "WeekModules": [
+            {
+                "module_number": "1.1",
+                "module": "Python Syntax and Data Types",
+                "duration_hrs": 1.3
+            },
+            {
+                "module_number": "1.2",
+                "module": "Variables, Operators, and Control Flow",
+                "duration_hrs": 1.3
+            },
+            {
+                "module_number": "1.3",
+                "module": "Data Structures: Lists, Tuples, and Dictionaries",
+                "duration_hrs": 1.4
+            }
+        ],
+        "HoursPerWeek": 4
+    },
+    {
+        "WeekNumber": 2,
+        "WeekTopic": "Data Manipulation with Pandas",
+        "WeekModules": [
+            {
+                "module_number": "2.1",
+                "module": "Introduction to Pandas and DataFrames",
+                "duration_hrs": 1.3
+            },
+            {
+                "module_number": "2.2",
+                "module": "Data Loading, Cleaning, and Transformation",
+                "duration_hrs": 1.3
+            },
+            {
+                "module_number": "2.3",
+                "module": "Basic Data Analysis with Pandas",
+                "duration_hrs": 1.4
+            }
+        ],
+        "HoursPerWeek": 4
+    },
+    {
+        "WeekNumber": 3,
+        "WeekTopic": "Automating Repetitive Tasks",
+        "WeekModules": [
+            {
+                "module_number": "3.1",
+                "module": "Introduction to Python Scripting and Functions",
+                "duration_hrs": 1.3
+            },
+            {
+                "module_number": "3.2",
+                "module": "Conditional Statements and Loops",
+                "duration_hrs": 1.3
+            },
+            {
+                "module_number": "3.3",
+                "module": "Automating File Operations and System Tasks",
+                "duration_hrs": 1.4
+            }
+        ],
+        "HoursPerWeek": 4
+    },
+    {
+        "WeekNumber": 4,
+        "WeekTopic": "Data Visualization and Workflow Automation",
+        "WeekModules": [
+            {
+                "module_number": "4.1",
+                "module": "Data Visualization with Matplotlib and Seaborn",
+                "duration_hrs": 1.3
+            },
+            {
+                "module_number": "4.2",
+                "module": "Creating Automated Data Processing Workflows",
+                "duration_hrs": 1.3
+            },
+            {
+                "module_number": "4.3",
+                "module": "Writing Clean and Maintainable Python Code",
+                "duration_hrs": 1.4
+            }
+        ],
+        "HoursPerWeek": 4
+    }
+]

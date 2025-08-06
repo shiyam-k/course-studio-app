@@ -1,0 +1,6 @@
+API_KEYS = []
+
+
+GEMMA_MODEL="gemma3n:e4b"
+
+OLLAMA_ENDPOINT='http://127.0.0.1:11434'

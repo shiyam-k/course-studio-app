@@ -1,0 +1,44 @@
+# Mastering Python Basics: Launch Your Coding Career
+
+**Overview:** Embark on a dynamic learning journey to build a solid foundation in Python programming, empowering you with the essential skills to kickstart your career in tech. This quick-start course is designed to equip you with practical, job-ready knowledge, making you an attractive candidate for entry-level programming roles.
+
+---
+
+## Course Details
+
+**Total Weeks:** 4
+
+### Weeks
+- Week 1: Your First Lines of Code: Building a Strong Foundation
+- Week 2: Controlling the Flow: Decisions, Repetition & Problem-Solving
+- Week 3: Organizing Your Code: Functions, Lists & Dictionaries for Efficiency
+- Week 4: Practical Python for Career Success: Files, Errors & Your Portfolio
+
+### Prerequisites
+- Basic computer literacy (navigating files and folders)
+- A desire to learn problem-solving
+
+### Learning Outcomes
+- Identify fundamental **Python** syntax and data types for effective program construction.
+- Explain the purpose and application of control flow structures (**if/else**, loops) to guide program execution.
+- Implement basic **Python** scripts to solve simple computational problems efficiently.
+- Analyze and debug common errors in **Python** programs to ensure functionality and reliability.
+- Develop a small, functional **Python** application demonstrating core programming concepts, suitable for a professional portfolio.
+
+### Skills Acquired
+- **Python** Syntax Fundamentals
+- Variables & Data Types (**int**, **str**, **float**, **bool**)
+- Operators (Arithmetic, Logical, Comparison)
+- Conditional Statements (*if*, *elif*, *else*)
+- Looping Constructs (*for*, *while*)
+- Function Definition & Invocation
+- Working with Lists & Tuples
+- Managing Dictionaries & Sets
+- Basic String Manipulation
+- File Input/Output (I/O)
+- Error Handling (*try/except* blocks)
+- Basic Debugging Techniques
+- Algorithmic Thinking
+- Problem-Solving with **Python**
+- Code Readability & Best Practices
+
